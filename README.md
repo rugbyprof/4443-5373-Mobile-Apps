@@ -16,7 +16,7 @@
 
 ## Topics
 
--Introduction / Fast Overview
+- Introduction / Fast Overview
     - HTML
     - CSS
     - The DOM
