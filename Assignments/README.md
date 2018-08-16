@@ -1,6 +1,6 @@
 ## Assignments
 | Folder | Assignment | Description | Due|
  | ------------|------------|------------|------------|
- | [A01](https://github.com/rugbyprof/4443-Mobile-Apps/tree/master/Assignments/A01) | [ Assignment 1 ](https://github.com/rugbyprof/4443-Mobile-Apps/tree/master/Assignments/A01) | [ Creating a repository](https://github.com/rugbyprof/4443-Mobile-Apps/tree/master/Assignments/A01) | [Second Week of Class](https://github.com/rugbyprof/4443-Mobile-Apps/tree/master/Assignments/A01) |
+ | [A01](https://github.com/rugbyprof/4443-Mobile-Apps/tree/master/Assignments/A01) | [ Assignment 1 ](https://github.com/rugbyprof/4443-Mobile-Apps/tree/master/Assignments/A01) | [ Creating a repository](https://github.com/rugbyprof/4443-Mobile-Apps/tree/master/Assignments/A01) | [N/A](https://github.com/rugbyprof/4443-Mobile-Apps/tree/master/Assignments/A01) | [Second Week of Class](https://github.com/rugbyprof/4443-Mobile-Apps/tree/master/Assignments/A01) |
 
-<sup>Last Updated: 2018-08-16 (Thu @ 14:50)</sup>
+<sup>Last Updated: 2018-08-16 (Thu @ 15:34)</sup>
