@@ -1,6 +1,6 @@
 ## Resources
 | Folder | Resource | Description|
  | ------------|------------|------------|
- |  |
+ | [N/A](https://github.com/rugbyprof/4443-Mobile-Apps/tree/master/Resources/N/A) |
 
-<sup>Last Updated: 2018-08-16 (Thu @ 15:47)</sup>
+<sup>Last Updated: 2018-08-16 (Thu @ 15:51)</sup>
