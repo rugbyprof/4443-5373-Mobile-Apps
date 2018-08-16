@@ -47,7 +47,7 @@
 | 	                             |     |  D       | 59-68    |
 |                                |     |  F       | below 59 |
 
-
+>
 **1**. Any projects that include programs as well as programs themselves must run without error. If they do not run, they will not be graded. Correctness is a different matter. However, the program must be close to the solution required and cannot be an over simplified version simply for the purpose of making it run. 
 >
 >**2**. The worth of the "homework/quizzes" section of the course will be calculated by a function based on the number of assignments and quizzes. If zero homeworks / quizzes are assigned then they will be assigned a 0% portion. If at least 10 are assigned then the full 25% will be assigned as its weight. If the full weight is not used the class will decide how the remaining percentage points will be assigned. 
