@@ -262,9 +262,9 @@ You can set the size of the text used in an element by using the font-size prope
 
 There are a lot of choices for values:
 
-| Largest  |         |           |          |         |          |         |           | Smallest | Integer |
-|----------|---------|-----------|----------|---------|----------|---------|-----------|----------|---------|
-| xx-large | x-large | larger    | large    | medium  | small    | smaller | x-small   | xx-small | length  |
+| Largest  |         |        |       |        |       |         |         | Smallest | Integer |
+| -------- | ------- | ------ | ----- | ------ | ----- | ------- | ------- | -------- | ------- |
+| xx-large | x-large | larger | large | medium | small | smaller | x-small | xx-small | length  |
 
 #### % (percent)
 
