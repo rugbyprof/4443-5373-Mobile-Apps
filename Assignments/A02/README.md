@@ -49,6 +49,11 @@
 - If you want to refer to "your current directory", you can use the `.` . 
 - To create a directory, type: `mkdir dir_name`.
 
+**Also!**
+
+- Remember your :arrow_up: and :arrow_down: arrows! These will step through your previous commands.
+- Type `history` to see ALL the commands you've type EVER!
+
 ## Hello World
 
 Let's get started by creating a "Hello World" `Node.js` app.
