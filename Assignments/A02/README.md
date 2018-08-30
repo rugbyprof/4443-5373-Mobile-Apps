@@ -23,10 +23,9 @@
 ### IDE
 
 - Install [Visual Studio Code](https://code.visualstudio.com/) and then install the following VS Code extensions:
-
-- Live Server https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer
-- Beautify https://marketplace.visualstudio.com/items?itemName=HookyQR.beautify
-- Code Runner https://marketplace.visualstudio.com/items?itemName=formulahendry.code-runner
+    - Live Server https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer
+    - Beautify https://marketplace.visualstudio.com/items?itemName=HookyQR.beautify
+    - Code Runner https://marketplace.visualstudio.com/items?itemName=formulahendry.code-runner
 
 **Installing extensions:**
 
