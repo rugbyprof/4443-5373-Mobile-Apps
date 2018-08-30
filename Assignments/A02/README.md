@@ -54,7 +54,7 @@
 - Remember your :arrow_up: and :arrow_down: arrows! These will step through your previous commands.
 - Type `history` to see ALL the commands you've type EVER!
 
-## Hello World
+## Hello World App
 
 Let's get started by creating a "Hello World" `Node.js` app.
 
@@ -80,7 +80,7 @@ console.log(msg);
     1. Since we installed `code runner` you can simply right click and choose `Run Code`. It should open up a mini terminal in your IDE and show the output.
     2. Or go back to your terminal and type `node app.js` to run it (the integrated terminal doesn't need code runner installed, but it does make it a little easier).
     
-## Express Server
+## Express Server App
 
 Install the Express Generator by running the following from a terminal:
 
