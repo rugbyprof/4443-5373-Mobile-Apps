@@ -22,7 +22,7 @@
 
 ### IDE
 
-- Install [Visual Studio Code](https://code.visualstudio.com/) and then install the following VS Code extensions:
+- Install [Visual Studio Code](https://code.visualstudio.com/) and then install the following VS Code extensions (The links are just to make sure you get the correct extension, not needed to actually install):
     - Live Server https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer
     - Beautify https://marketplace.visualstudio.com/items?itemName=HookyQR.beautify
     - Code Runner https://marketplace.visualstudio.com/items?itemName=formulahendry.code-runner
