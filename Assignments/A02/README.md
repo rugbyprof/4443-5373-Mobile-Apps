@@ -66,7 +66,7 @@ cd hello_world
 code .
 ```
 
-> Note: `code .` means open VS Code in `this` directory. (See I told you we use the . and .. ).
+> Note: `code .` means open VS Code in the current directory. (See I told you we use the . and .. ).
 
 - VS Code is now open and your `hello_world` folder is loaded. 
 - Create a file called `app.js` and put the following in it:
