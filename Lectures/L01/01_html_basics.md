@@ -93,12 +93,14 @@
 | `<wbr> `           | This element has been added in HTML5	Represents a line break opportunity , that is a suggested point for wrapping text in order to improve readability of text split on several lines.                                                                                                        |
 
 ### Edits
+
 | Element  | Description                          |
 | -------- | ------------------------------------ |
 | `<ins>	` | Defines an addition to the document. |
 | `<del>	` | Defines a removal from the document. |
 
 ### Embedded content
+
 | Element         | Description                                                                                                                                                             |
 | --------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **`<img>	`**    | Represents an image .                                                                                                                                                   |
@@ -116,7 +118,7 @@
 | `<svg> `        | This element has been added in HTML5	Defines an embedded vectorial image .                                                                                              |
 | `<math> `       | This element has been added in HTML5	Defines a mathematical formula .                                                                                                   |
 
-###Tabular data
+### Tabular data
 
 | Element       | Description                                                                  |
 | ------------- | ---------------------------------------------------------------------------- |
@@ -131,7 +133,7 @@
 | **`<td>`**    | Represents a data cell in a table.                                           |
 | **`<th>`**    | Represents a header cell in a table.                                         |
 
-###Forms
+### Forms
 
 | Element          | Description                                                                                                         |
 | ---------------- | ------------------------------------------------------------------------------------------------------------------- |
