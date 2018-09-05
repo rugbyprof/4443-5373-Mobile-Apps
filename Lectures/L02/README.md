@@ -1,4 +1,5 @@
-## Getting IONIC Up and Running
+## IONIC - Getting Up and Running
+#### Due: Monday, September 10<sup>th</sup> by classtime.
 
 ### Ionic CLI
 - `npm install -g cordova ionic`
