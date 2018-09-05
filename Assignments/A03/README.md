@@ -33,8 +33,8 @@
         3. Environment Variables and find PATH
         4. Append the path of tools and platform-tools directories to the end of your PATH variable.
    - OSX 
-    - Edit .bash_profile
-    - export PATH=${PATH}:/Development/android-sdk/platform-tools:/Development/android-sdk/tools
+        - Edit .bash_profile
+        - export PATH=${PATH}:/Development/android-sdk/platform-tools:/Development/android-sdk/tools
 
 ### Create and Run an Ionic App
 
