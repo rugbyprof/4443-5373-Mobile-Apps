@@ -38,11 +38,11 @@
 
 ### Create and Run an Ionic App
 
-    - `ionic start <name> <template> [options]` (example create line)
-    - `ionic serve`   (after changing into an ionic project folder, will run your project)
-    - `ionic cordova platform --help` (help on adding an emulator)
-    - `ionic cordova build ios` (add ios as an emulator)
-    - `ionic cordova build android` (add android as an emulator)
+- `ionic start <name> <template> [options]` (example create line)
+- `ionic serve`   (after changing into an ionic project folder, will run your project)
+- `ionic cordova platform --help` (help on adding an emulator)
+- `ionic cordova build ios` (add ios as an emulator)
+- `ionic cordova build android` (add android as an emulator)
 
 
 ### Crash Course
