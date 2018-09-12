@@ -1,5 +1,5 @@
 ## Dev Environment - Setting up a local dev environment
-### Due: September 5<sup>th</sup> by classtime
+### Due: September 14<sup>th</sup> by 5:00 pm
 
 ## Required Packages
 
