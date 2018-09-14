@@ -110,7 +110,27 @@ From a terminal in the Express application folder, run:
 npm start
 ```
 
+You can also run the following to get the same result:
+
+```bash
+node ./bin/www
+```
+
 The Node.js web server will start and you can browse to `http://localhost:3000` to see the running application.
+
+If you run it like below, you can specify your port:
+
+```bash
+PORT=8023 node ./bin/www
+```
+
+The Node.js web server will start and you can browse to `http://localhost:8023` to see the running application.
+
+## What to show Griffin
+
+- Using the `myport` exe included in this folder, run `./myport yourlastname` to get your unique port number to show me. 
+- The 'dot slash' in front of the `myport` exe is necessary.
+- If it won't run, try: `chmod +x myport` to add execute permissions to it.
 
 ## Helpful Links
 
