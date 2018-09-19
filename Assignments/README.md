@@ -8,4 +8,4 @@
  | [A05](https://github.com/rugbyprof/4443-Mobile-Apps/tree/master/Assignments/A05) | [ Angular Firestore ](https://github.com/rugbyprof/4443-Mobile-Apps/tree/master/Assignments/A05) | [ Angular with Firestore](https://github.com/rugbyprof/4443-Mobile-Apps/tree/master/Assignments/A05) | [September 21<sup>st</sup> by 5:00pm](https://github.com/rugbyprof/4443-Mobile-Apps/tree/master/Assignments/A05) |
  | [A06](https://github.com/rugbyprof/4443-Mobile-Apps/tree/master/Assignments/A06) | [ IONIC ](https://github.com/rugbyprof/4443-Mobile-Apps/tree/master/Assignments/A06) | [ Getting Up and Running](https://github.com/rugbyprof/4443-Mobile-Apps/tree/master/Assignments/A06) | [Monday, September 28<sup>th</sup> by classtime.](https://github.com/rugbyprof/4443-Mobile-Apps/tree/master/Assignments/A06) |
 
-<sup>Last Updated: 2018-09-17 (Mon @ 17:32)</sup>
+<sup>Last Updated: 2018-09-19 (Wed @ 10:53)</sup>
