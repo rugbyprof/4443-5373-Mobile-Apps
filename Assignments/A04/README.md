@@ -1,5 +1,5 @@
 ## Angular Firestore - Angular with Firestore
-### Due: September 21<sup>st</sup> by 5:00pm
+### Due: TBD
 
 
 ### Based on Tour of Heroes
