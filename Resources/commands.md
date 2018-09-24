@@ -1,0 +1,28 @@
+- Create an ionic app:   
+    - `ionic start firebase-login blank`
+- Change into folder:
+    - `cd firebase-login`
+- Start vs code in this folder:
+    - `code .`
+- We deleted the original homepage, then added 3 others:
+    - `ionic generate page HomePage`
+    - `ionic generate page LoginPage`
+    - `ionic generate page SignUpPage`
+- Run ionic serve and view in browser:
+    - `ionic serve`
+- Create an Auth and Data service:
+    - `ionic generate provider Auth`
+    - `ionic generate provider Data`
+- Run in browser (again):
+- `ionic serve`
+- Install packages to talk to firebase:
+    - `npm install firebase angularfire2`
+    - `npm install firebase`
+    - `npm install angularfire2`
+- Run in browser (again):
+    - `ionic serve`
+- Run in browser (again):
+    - `ionic serve`
+- Install specific rxjs package to fix some run time error:  
+    - `npm i rxjs@6 rxjs-compat@6 promise-polyfill --save`
+- `ionic serve`
