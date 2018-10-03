@@ -1,27 +1,64 @@
-## Angular Tutorial - Getting started with Angular
-### Due: September 21<sup>th</sup> by 5:00pm
+## Geolocation - Google Maps
+### Due: Part 1 by October 10<sup>th</sup>
 
-# Not Done ... 
+### Overview
 
-#### Update
+This will be a multi-part project that will be based around user location. 
+- Part 1 (Due Oct 10<sup>th</sup>)
+  - Show users current location on a map, and save that location to a firestore collection.
+- Part 2 (Due TBD)
+  - Add a user login / registration page.
+  - Make user authenticate before starting the logging feature.
+- Part 3 (Due TBD)
+  - Add a configuration page that will let a user:
+    - Pick how often location gets logged
+    - (we will add more later) 
+- Part 4 (Due TBD)
+  - Multi-User broadcast location
+- Part 5 (Due TBD)
+  - Image upload with geo-tagged info for image.
 
-- I'm turning this Tour of Heroes tutorial into our first assignment using Firebase and Bootstrap. 
-- Look at the image below:
+You can work with a partner. It is possible to work in groups of 3, but I have to OK the group.
 
-![](https://angular.io/generated/images/guide/toh/nav-diagram.png)
+## Part 1
 
-- And think to yourself 'video game' instead of Hero ... and that's what we'll do.
+### Create a Firestore Collection
 
+- Create a Firebase account (if you don't have one)
+- Create a new project called `my-location` (you may have to change it a little to be unique)
+- In your project, create two Cloud Firestore collections:
+  - `users`
+  - `locations`
 
-#### Tutorial: Tour of Heroes
-- https://angular.io/tutorial
+Your `users` collection should only have 1 user right now:
 
+```json
+{
+  "id": 100,
+  "first": "your first name",
+  "last":"your last name",
+  "email":"your@email.com"
+}
+```
 
+Your `locations` collection will store documents similar to :
 
-### Helpful Links
+```json
+{
+  "id": 100,
+  "point":[33.90976, 98.500847],
+  "time": "October 3, 2018 at 1:45:00 PM UTC-5"
+}
+```
 
-- https://medium.com/codingthesmartway-com-blog/building-an-angular-5-project-with-bootstrap-4-and-firebase-4504ff7717c1
-- https://coursetro.com/posts/code/94/Use-Angular-with-Google's-Cloud-Firestore---Tutorial
-- https://angularfirebase.com/lessons/angular-components-basics-top-ten/
-- https://angularfirebase.com/lessons/basics-angular-router/
+### Geolocation Tutorial
+
+- This [Geolocation Tutorial](https://www.joshmorony.com/ionic-2-how-to-use-google-maps-geolocation-video-tutorial/) will show you how to display a map, and add a map marker.
+- You will have to get an [api key](https://developers.google.com/maps/documentation/javascript/get-api-key) from google.
+
+## Part 2
+
+### User Authentication
+
+This [Authentication Tutorial](https://medium.com/appseed-io/integrating-firebase-password-and-google-authentication-into-your-ionic-3-app-2421cee32db9) shows you how to authenticate with Firebase and Ionic. 
 
