@@ -1,7 +1,7 @@
 const admin = require('./node_modules/firebase-admin');
 const serviceAccount = require("./service-key.json");
 
-var data = require("./candy_3.json");
+var data = require("./candy_5.json");
 
 
 admin.initializeApp({
