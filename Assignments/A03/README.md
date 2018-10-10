@@ -55,6 +55,8 @@ Your `locations` collection will store documents similar to :
 
 - This [Geolocation Tutorial](https://www.joshmorony.com/ionic-2-how-to-use-google-maps-geolocation-video-tutorial/) will show you how to display a map, and add a map marker.
 - You will have to get an [api key](https://developers.google.com/maps/documentation/javascript/get-api-key) from google.
+- Put your my-locations project in your assignments folder on github.
+- Delete your `node_modules` folder first.
 
 ## Part 2
 
