@@ -6,7 +6,7 @@
 This will be a multi-part project that will be based around user location. 
 - Part 1 (Due Oct 10<sup>th</sup>)
   - Show users current location on a map, and save that location to a firestore collection.
-- Part 2 (Due TBD)
+- Part 2 (Due Oct 17<sup>th</sup>)
   - Add a user login / registration page.
   - Make user authenticate before starting the logging feature.
 - Part 3 (Due TBD)
@@ -60,5 +60,7 @@ Your `locations` collection will store documents similar to :
 
 ### User Authentication
 
-This [Authentication Tutorial](https://medium.com/appseed-io/integrating-firebase-password-and-google-authentication-into-your-ionic-3-app-2421cee32db9) shows you how to authenticate with Firebase and Ionic. 
+- This [Authentication Tutorial](https://medium.com/appseed-io/integrating-firebase-password-and-google-authentication-into-your-ionic-3-app-2421cee32db9) shows you how to authenticate with Firebase and Ionic. 
+- Forms: https://robferguson.org/blog/2017/11/19/ionic-3-and-forms/
+- Authentication: https://ionicthemes.com/tutorials/about/firebase-authentication-in-ionic-framework-apps
 
