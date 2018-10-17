@@ -57,12 +57,30 @@ Your `locations` collection will store documents similar to :
 - You will have to get an [api key](https://developers.google.com/maps/documentation/javascript/get-api-key) from google.
 - Put your my-locations project in your assignments folder on github.
 - Delete your `node_modules` folder first.
+- [Background Location] https://www.joshmorony.com/adding-background-geolocation-to-an-ionic-2-application/
 
 ## Part 2
 
 ### User Authentication
 
-- This [Authentication Tutorial](https://medium.com/appseed-io/integrating-firebase-password-and-google-authentication-into-your-ionic-3-app-2421cee32db9) shows you how to authenticate with Firebase and Ionic. 
+- This [Authentication Tutorial]https://ionicthemes.com/tutorials/about/firebase-authentication-in-ionic-framework-apps shows you how to authenticate with Firebase and Ionic. 
 - Forms: https://robferguson.org/blog/2017/11/19/ionic-3-and-forms/
-- Authentication: https://ionicthemes.com/tutorials/about/firebase-authentication-in-ionic-framework-apps
 
+This is a create user function that can be placed where 
+
+```ts
+  createUser(
+    first:any,
+    last:any,
+    email: any
+  ): Promise<void> {
+    const id = this.firestore.createId();
+    console.log(id);
+    return this.firestore.doc(`users/${id}`).set({
+      id,
+      first,
+      last,
+      email
+    });
+  }
+```
