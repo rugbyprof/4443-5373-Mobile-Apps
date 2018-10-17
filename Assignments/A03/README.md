@@ -85,7 +85,7 @@ This is a create user function that can be placed where
   }
 ```
 
-### Deliverables
+### Part 2 Deliverables
 
 - A folder called `login-register` exists in your `assignments` folder.
 - Your project has a login page that allows a user to login authenticating with `Firebase`.
