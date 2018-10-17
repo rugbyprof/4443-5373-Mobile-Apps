@@ -1,1 +1,1 @@
-## Resources Shady_Materials - No Description
+## Shady Materials - All of Shady's lecture materials.
