@@ -1,4 +1,5 @@
-## 4443 Mobile Apps - Program 3 - Part 2
+
+ ## 4443 Mobile Apps - Program 3 - Part 1
 
 ### Name_____________________________________________
 
@@ -11,10 +12,10 @@
 | 2.1 | Your code is commented.  | | | |
 | _ | | | | |
 | ***3*** | ***Requirements*** | 80 | | |
-| 3.1 |Your project has a login page that allows a user to login authenticating with  `Firebase`.| | | |
-| 3.2 |Your project has a register page that places the user in the  `Authentication`  portion of your Firebase project.| | | |
-| 3.3 |Your registration page also places some user info within your users collection.| | | |
-| 3.4 | After a successful login they are re-directed to some / any other page.
+| 3.1 |Map displays on at least one view in your app.| | | |
+| 3.2 |Users location can be marked visibly, either based on screen load or some click event.| | | |
+| 3.3 |Firestore has two collections: users and locations.| | | |
+| 3.4 |App writes current location to Firestore in the locations collection.
 | _ | | | | |
 | Totals: | **100** | **100** | | |
 
@@ -42,3 +43,9 @@
 ```
 
   
+
+[1]: https://d3vv6lp55qjaqc.cloudfront.net/items/3E231i211n2E042B1U3K/right.png  "Correct"
+
+[2]: https://d3vv6lp55qjaqc.cloudfront.net/items/2X473C1Q1F2x3S1E4231/wrong.gif  "Incorrect"
+
+[3]: https://d3vv6lp55qjaqc.cloudfront.net/items/1A0d2Q1J1N1u0C3g0C1s/null.gif  "Errors"
