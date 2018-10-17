@@ -88,6 +88,7 @@ This is a create user function that can be placed where
 ### Part 2 Deliverables
 
 - A folder called `login-register` exists in your `assignments` folder.
+- All additional code added or any code changed should be commented!
 - Your project has a login page that allows a user to login authenticating with `Firebase`.
 - Your project has a register page that places the user in the `Authentication` portion of your Firebase project.
 - Your registration page also places some user info within your users collection.
