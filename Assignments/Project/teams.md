@@ -102,6 +102,6 @@
 18	Rowe, Travis E.		3,4,2
 19	Smith, Buddy J.		1,2,5
 20	Vijayaraman, Vasudev 1,2
-21	Workman, Brett M.	
+21	Workman, Brett M.	1,2
 
 ### Team Assignments
