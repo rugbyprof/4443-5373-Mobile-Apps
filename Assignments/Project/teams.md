@@ -9,27 +9,30 @@
 
 
 #### 1) Firebase / Backend Team
-    - Create a ***firebase service*** that can be injected into any component that gives the following functionality:
+    - Create a `firebase service` that can be injected into any component that gives the following functionality:
     - Users
-        - POST a new user 
-        - GET a user
-        - PUT a user (update)
-        - DELETE a user (not important right now)
+        - `POST` a new user 
+        - `GET` a user
+        - `PUT` a user (update)
+        - `DELETE` a user (not important right now)
     - Groups
-        - POST a new group
-        - GET all groups
-        - DELETE a group
+        - `POST` a new group
+        - `GET` all groups
+        - `DELETE` a group
+
+
+
     - Locations:
-        - POST a location
-        - GET a location (e.g. current user location)
+        - `POST` a location
+        - `GET` a location (e.g. current user location)
     - Images:
-        - POST a new image
-        - GET a single image
-        - GET a group of images
-        - POST tags for an image
-        - GET tags for an image
-        - PUT tags for an image
-        - DELET an image / with tags.
+        - `POST` a new image
+        - `GET` a single image
+        - `GET` a group of images
+        - `POST` tags for an image
+        - `GET` tags for an image
+        - `PUT` tags for an image
+        - `DELETE` an image / with tags.
     - Example use cases:
         - Get all locations for a single user.
         - Get all locations for a group of users.
@@ -40,7 +43,7 @@
         - GeoLocation: https://ionicframework.com/docs/native/geolocation/
         - GeoFencing: https://ionicframework.com/docs/native/geofence/
         - Location Accuracy: https://ionicframework.com/docs/native/location-accuracy/
-        - ***Location Service:***
+        - `Location Service:`
             - Run in background or event driven.
             - Events:
                 - Tap / Click / Swipe 
@@ -49,7 +52,8 @@
             - GET a users location
             - POST a users location
             - PUT update a users latest location
-    - ***3)*** Routing 
+  
+#### 3) Routing 
         - Routing between two points (users or locations) using some API, most likely Google.
         - Routes are not saved, but are displayed to the user.
         - Best scenario, create a Routing service that any component and call and get a route (json object of points) to be displayed on a map.
@@ -82,26 +86,28 @@
 
 ### Student List
 
-1	Allard, Brice W.	1,2
-2	Beaver, Sarah A.	1,2,3,5
-3	Callender, Clorissa 3, 4
-4	Conley, Zachary L.	4,1
-5	Cortez, Darien A.	2, 5
-6	Dinh, Luong T.	4,1	
-7	Divine, William M.	4, 5
-8	Duhan, Christopher 	1,2
-9	Glebe, Jeremy D.	1, 5 
-10	Joseph, Jamal J.	2, 4
-11	Lopez, Jakob L.		1,2
-12	McGinn, David N.    5,2	
-13	Michener, Cory L.	5, 1
-14	Mullins, Samuel S.	1, 2
-15	Patterson, Jacob W.	 1,5
-16	Placencia, Carlos A. 2, 1
-17	Rollerson, Keona	
-18	Rowe, Travis E.		3,4,2
-19	Smith, Buddy J.		1,2,5
-20	Vijayaraman, Vasudev 1,2
-21	Workman, Brett M.	1,2
+| #   | Student              | Group   |
+| --- | -------------------- | ------- |
+| 1   | Allard, Brice W.     | 1,2     |
+| 2   | Beaver, Sarah A.     | 1,2,3,5 |
+| 3   | Callender, Clorissa  | 3, 4    |
+| 4   | Conley, Zachary L.   | 4,1     |
+| 5   | Cortez, Darien A.    | 2, 5    |
+| 6   | Dinh, Luong T.       | 4,1     |
+| 7   | Divine, William M.   | 4, 5    |
+| 8   | Duhan, Christopher   | 1,2     |
+| 9   | Glebe, Jeremy D.     | 1, 5    |
+| 10  | Joseph, Jamal J.     | 2, 4    |
+| 11  | Lopez, Jakob L.      | 1,2     |
+| 12  | McGinn, David N.     | 5,2     |
+| 13  | Michener, Cory L.    | 5, 1    |
+| 14  | Mullins, Samuel S.   | 1, 2    |
+| 15  | Patterson, Jacob W.  | 1,5     |
+| 16  | Placencia, Carlos A. | 2, 1    |
+| 17  | Rollerson, Keona     |         |
+| 18  | Rowe, Travis E.      | 3,4,2   |
+| 19  | Smith, Buddy J.      | 1,2,5   |
+| 20  | Vijayaraman, Vasudev | 1,2     |
+| 21  | Workman, Brett M.    | 1,2     |
 
 ### Team Assignments
