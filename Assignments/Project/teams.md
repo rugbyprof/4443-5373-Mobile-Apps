@@ -8,7 +8,7 @@
 - UI / UX Team
 
 
-#### Firebase / Backend Team
+#### 1) Firebase / Backend Team
     - Create a ***firebase service*** that can be injected into any component that gives the following functionality:
     - Users
         - POST a new user 
@@ -35,7 +35,7 @@
         - Get all locations for a group of users.
 
 
-#### User Locations / Routing Team
+#### 2) User Locations / Routing Team
     - Location:
         - GeoLocation: https://ionicframework.com/docs/native/geolocation/
         - GeoFencing: https://ionicframework.com/docs/native/geofence/
@@ -49,7 +49,7 @@
             - GET a users location
             - POST a users location
             - PUT update a users latest location
-    - Routing 
+    - ***3)*** Routing 
         - Routing between two points (users or locations) using some API, most likely Google.
         - Routes are not saved, but are displayed to the user.
         - Best scenario, create a Routing service that any component and call and get a route (json object of points) to be displayed on a map.
@@ -60,7 +60,7 @@
         - Visualizing Routing and Static points using Google Maps Api
 
 
-#### Camera / Social Media Team
+#### 4) Camera / Social Media Team
     - https://ionicframework.com/docs/native/photo-viewer/
     - https://ionicframework.com/docs/native/photo-library/
     - https://ionicframework.com/docs/native/lastcam/
@@ -71,7 +71,7 @@
     - Uploads will be taggd with location if possible.
     - Uploads also have the possibility to go to instagram and / or facebook as well.
 
-#### UI/UX
+#### 5) UI/UX
     - App layout and design
     - In charge of:
         - page transitions
@@ -82,26 +82,26 @@
 
 ### Student List
 
-1	Allard, Brice W.	
-2	Beaver, Sarah A.	
-3	Callender, Clorissa 
-4	Conley, Zachary L.	
-5	Cortez, Darien A.	
-6	Dinh, Luong T.		
-7	Divine, William M.	
-8	Duhan, Christopher 	
-9	Glebe, Jeremy D.	
-10	Joseph, Jamal J.	
-11	Lopez, Jakob L.		
-12	McGinn, David N.	
-13	Michener, Cory L.	
-14	Mullins, Samuel S.	
-15	Patterson, Jacob W.	
-16	Placencia, Carlos A.
+1	Allard, Brice W.	1,2
+2	Beaver, Sarah A.	1,2,3,5
+3	Callender, Clorissa 3, 4
+4	Conley, Zachary L.	4,1
+5	Cortez, Darien A.	2, 5
+6	Dinh, Luong T.	4,1	
+7	Divine, William M.	4, 5
+8	Duhan, Christopher 	1,2
+9	Glebe, Jeremy D.	1, 5 
+10	Joseph, Jamal J.	2, 4
+11	Lopez, Jakob L.		1,2
+12	McGinn, David N.    5,2	
+13	Michener, Cory L.	5, 1
+14	Mullins, Samuel S.	1, 2
+15	Patterson, Jacob W.	 1,5
+16	Placencia, Carlos A. 2, 1
 17	Rollerson, Keona	
-18	Rowe, Travis E.		
-19	Smith, Buddy J.		
-20	Vijayaraman, Vasudev
+18	Rowe, Travis E.		3,4,2
+19	Smith, Buddy J.		1,2,5
+20	Vijayaraman, Vasudev 1,2
 21	Workman, Brett M.	
 
 ### Team Assignments
