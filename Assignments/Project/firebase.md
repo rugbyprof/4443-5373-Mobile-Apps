@@ -1,7 +1,4 @@
-## FLApp - Awesome Project
-#### Due : TBD
-
-### Firebase Structure
+# Firebase Structure
 
 Firebase data types:
 https://firebase.google.com/docs/firestore/manage-data/data-types
@@ -11,12 +8,12 @@ https://firebase.google.com/docs/firestore/manage-data/data-types
 There will be a user collection that stores general user information along with a sub-collection of user locations.
 
 #### Fields:
->- first : string
->- last : string 
->- email : string
->- registered : date
->- avatar: reference (cloud firestore reference)
->- locations : sub-collection
+>- first : string - first name
+>- last : string  - last name
+>- email : string - email address
+>- registered : date - date when user was created
+>- avatar: reference (cloud firestore reference) - some image id or base64 encoded string for an image
+>- locations : sub-collection   - a sub collection of locations for a user
 
 ___Example Json___:
 ```json
@@ -35,10 +32,10 @@ ___Example Json___:
 Each user will have their own collection of locations that stores a location along with a category of the type of location.
 
 #### Fields:
->- location : geoPoint
->- stamp : dateTime 
->- type : string
->- address : map (optional)
+>- location : geoPoint - lat lon pair
+>- stamp : dateTime    - date location was saved
+>- type : string    - one or two word label of a location (see examples)
+>- address : map (optional) - json object that holds an address
 
 ___Example___:
 ```json
@@ -63,10 +60,10 @@ A list of location types with descriptions.
 Can be used to populate drop down menus when a user wants to label a saved location.
 
 #### Fields:
->- location-type : string
->- description : string 
->- date-created: dateTime
->- creator-id: string
+>- location-type : string - one or two word label / description for a location
+>- description : string  - A longer description of a location
+>- date-created: dateTime - time the location type was created
+>- creator-id: string - id of user who created the type
 
 ___Example___:
 ```json
@@ -102,10 +99,10 @@ ___Example___:
 A list of group types with descriptions.
 
 #### Fields:
->- group-type : string
->- description : string 
->- date-created: dateTime
->- creator-id: string
+>- group-type : string - one or two word description / label of a group
+>- description : string    - longer description of group
+>- date-created: dateTime - time created
+>- creator-id: string - who created it
 
 ___Example___:
 ```json
