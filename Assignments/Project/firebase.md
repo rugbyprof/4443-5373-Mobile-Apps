@@ -71,7 +71,7 @@ ___Example___:
     "location-type": "favorite",
     "description": "A favorite location that you frequent often.",
     "date-created": "October 24, 2018 at 12:00:00 AM UTC-5",
-    "creator-id" : "0239hu23jhv4"
+    "creator-id" : "1zzwhh9g2qb5"
 }
 ```
 
@@ -89,8 +89,8 @@ This collection would probably be used to show locations of users to all other u
 ___Example___:
 ```json
 {
-    "user-id": "Hdla99yfyjf",
-    "location-id": "IKj8ekd8d",
+    "user-id": "861q66xqbuuk",
+    "location-id": "qyv46tnw2zn2",
 }
 ```
 
@@ -110,27 +110,29 @@ ___Example___:
     "group-type": "friends",
     "description": "All of Joe's freinds.",
     "date-created": "October 24, 2018 at 12:00:00 AM UTC-5",
-    "creator-id" : "0239hu23jhv4"
+    "creator-id" : "3g7a3p0g92cw"
 }
 ```
 
 ## Friends Request Collection:
 
-A collection of friend requests. Could be a sub-collection in a user possibly. 
+- A collection of friend requests. 
+- Could be a sub-collection in a user possibly. 
+- Or this could be a list of pending or rejected requests and all accepted requests goes into a user sub-collection.
 
 #### Fields:
 >- requestor-id : string - person requesting a friend
 >- requestee-id: string  - person receiving the request
 >- request-date: dateTime - when request was made
->- status : string - [Accepted, Rejected, None]
+>- status : string - [Accepted, Rejected, Pending]
 
 ___Example___:
 ```json
 {
-    "requestor-id ": "0239hu23jhv4",
-    "requestee-id": "IJNHhu23jhv2",
+    "requestor-id ": "4o0r5p88wpt6",
+    "requestee-id": "tl6lqseleiw1",
     "request-date": "October 24, 2018 at 12:00:00 AM UTC-5",
-    "status" : "None"
+    "status" : "Pending"
 }
 ```
 
@@ -175,9 +177,25 @@ ___Example Json___:
 		}
 	}],
 	"groups": [
-		"12341345dsad",
-		"adsfwqerf3453"
-	]
+		"n39dywkkynu8",
+		"6lrqu1nfmywg"
+	],
+    "friend-requests" : [
+        {
+            "requestor-id ": "0239hu23jhv4",
+            "request-date": "October 24, 2018 at 12:00:00 AM UTC-5",
+            "status" : "Pending"
+        }
+    ],
+    "friends":[
+ 		"0frsynvLLxkZ",
+		"r5bjvynkp04g",
+		"q8wzdqgcgkl0",
+		"7zpg2v54in2d",
+		"vpiz1uop7ip6",
+		"yjha0l30szoj"
+    ]
+
 }
 ```
 
