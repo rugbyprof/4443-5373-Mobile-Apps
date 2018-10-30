@@ -6,11 +6,11 @@
 Firebase data types:
 https://firebase.google.com/docs/firestore/manage-data/data-types
 
-**User Collection:**
+## User Collection:
 
 There will be a user collection that stores general user information along with a sub-collection of user locations.
 
-**Fields:**
+#### Fields:
 >- first : string
 >- last : string 
 >- email : string
@@ -29,29 +29,40 @@ ___Example Json___:
     "groups" : "sub-collection of group_ids"
 }
 ```
-**User Locations Collection:**
+
+## User Locations Collection:
 
 Each user will have their own collection of locations that stores a location along with a category of the type of location.
 
-**Fields:**
+#### Fields:
 >- location : geoPoint
 >- stamp : dateTime 
 >- type : string
+>- address : map (optional)
 
 ___Example___:
 ```json
 {
-    location: [33.93874° N, 122.29837° W],
-    stamp: October 24, 2018 at 12:00:00 AM UTC-5,
-    type: [geotag, checkin, favorite, home, etc.]
+    "location": [33.93874, 122.29837],
+    "stamp": "October 24, 2018 at 12:00:00 AM UTC-5",
+    "type": ["geotag", "checkin", "favorite", "...", "home"],
+    "address" : {
+        "city":"Wichita Falls",
+        "state":"Texas",
+        "street": "3410 Taft Blvd",
+        "zip": "76308"
+    }
 }
 ```
 
-**Location Types Collection:**
+## Location Types Collection:
 
 A list of location types with descriptions.
 
-**Fields:**
+#### Possible Purpose:
+Can be used to populate drop down menus when a user wants to label a saved location.
+
+#### Fields:
 >- location-type : string
 >- description : string 
 >- date-created: dateTime
@@ -60,38 +71,37 @@ A list of location types with descriptions.
 ___Example___:
 ```json
 {
-    location-type: favorite,
-    description: "A favorite location that you frequent often.",
-    date-created: October 24, 2018 at 12:00:00 AM UTC-5,
-    creator-id : 0239hu23jhv4
+    "location-type": "favorite",
+    "description": "A favorite location that you frequent often.",
+    "date-created": "October 24, 2018 at 12:00:00 AM UTC-5",
+    "creator-id" : "0239hu23jhv4"
 }
 ```
 
-**Locations:**
+## Locations Collection:
 
-A list of top level locations of users, showing latest locations. This collection would probably be used to show locations of users to all other users in same group. It should be maintained by some observable cloud based function monitoring the changes in users personal location collections:
+A list of top level locations of users, showing latest locations. 
 
-**Fields:**
->- location-type : string
->- description : string 
->- date-created: dateTime
->- creator-id: string
+#### Possible Purpose:
+This collection would probably be used to show locations of users to all other users in same group. It should be maintained by some observable cloud based function monitoring the changes in users personal location collections:
+
+#### Fields:
+>- user-id : string
+>- location-id : string 
 
 ___Example___:
 ```json
 {
-    location-type: 324kjh34,
-    location: [33.93874° N, 122.29837° W],
-    last-updated: October 24, 2018 at 12:00:00 AM UTC-5,
-    user-id : 0239hu23jhv4
+    "user-id": "Hdla99yfyjf",
+    "location-id": "IKj8ekd8d",
 }
 ```
 
-**Group Types Collection:**
+## Groups Collection:
 
 A list of group types with descriptions.
 
-**Fields:**
+#### Fields:
 >- group-type : string
 >- description : string 
 >- date-created: dateTime
@@ -100,55 +110,75 @@ A list of group types with descriptions.
 ___Example___:
 ```json
 {
-    group-type: friends,
-    description: "All of Joe's freinds.",
-    date-created: October 24, 2018 at 12:00:00 AM UTC-5,
-    creator-id : 0239hu23jhv4
+    "group-type": "friends",
+    "description": "All of Joe's freinds.",
+    "date-created": "October 24, 2018 at 12:00:00 AM UTC-5",
+    "creator-id" : "0239hu23jhv4"
 }
 ```
 
-### Complete Example
+## Friends Request Collection:
+
+A collection of friend requests. Could be a sub-collection in a user possibly. 
+
+#### Fields:
+>- requestor-id : string - person requesting a friend
+>- requestee-id: string  - person receiving the request
+>- request-date: dateTime - when request was made
+>- status : string - [Accepted, Rejected, None]
+
+___Example___:
+```json
+{
+    "requestor-id ": "0239hu23jhv4",
+    "requestee-id": "IJNHhu23jhv2",
+    "request-date": "October 24, 2018 at 12:00:00 AM UTC-5",
+    "status" : "None"
+}
+```
+
+### Complete User Example
 
 ___Example Json___:
 ```json
 {
-    first: joe,
-    last: smith,
-    email: joe.smith@gmail.com,
-    registered: October 24, 2018 at 12:00:00 AM UTC-5,
-    locations: [
-        0239hu23jhv4: {
-            location: [33.93874° N, 122.29837° W],
-            stamp: October 24, 2018 at 12:00:00 AM UTC-5,
-            type: check-in
+    "first": "joe",
+    "last": "smith",
+    "email": "joe.smith@gmail.com",
+    "registered": "October 24, 2018 at 12:00:00 AM UTC-5",
+    "locations": [
+        "location": [33.93874, 122.29837],
+        "stamp": "October 21, 2018 at 6:23:00 PM UTC-5",
+        "type": ["geotag"],
+        "address" : {
+            "city":"Wichita Falls",
+            "state":"Texas",
+            "street": "123 Main Blvd",
+            "zip": "76308"
         },
-        q2341fdqwer: {
-            location: [33.93874° N, 122.29837° W],
-            stamp: October 24, 2018 at 12:00:00 AM UTC-5,
-            type: geotag
+        "location": [33.93874, 122.29837],
+        "stamp": "October 30, 2018 at 3:25:12 PM UTC-5",
+        "type": ["restaurant"],
+        "address" : {
+            "city":"Wichita Falls",
+            "state":"Texas",
+            "street": "234 Southwest Pkwy",
+            "zip": "76310"
         },
-        ...
-        sdfgar2345: {
-            location: [33.93874° N, 122.29837° W],
-            stamp: October 24, 2018 at 12:00:00 AM UTC-5,
-            type: home
-        }
+        "location": [33.93874, 122.29837],
+        "stamp": "October 24, 2018 at 12:00:00 AM UTC-5",
+        "type": ["work"],
+        "address" : {
+            "city":"Wichita Falls",
+            "state":"Texas",
+            "street": "3410 Taft Blvd",
+            "zip": "76308"
+        },
     ]
-    groups : [
-        12341345dsad,
-        adsfwqerf3453
+    "groups" : [
+        "12341345dsad",
+        "adsfwqerf3453"
     ]
 }
 ```
-
-
-### Project Components:
-
-Each component will provide a view with a service that saves / retrieves information from a central firebase project store.
-
-1) Location Service
-2) Image Upload Service
-3) Login / Registration Service
-
-
 
