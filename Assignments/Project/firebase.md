@@ -142,43 +142,45 @@ ___Example___:
 ___Example Json___:
 ```json
 {
-    "first": "joe",
-    "last": "smith",
-    "email": "joe.smith@gmail.com",
-    "registered": "October 24, 2018 at 12:00:00 AM UTC-5",
-    "locations": [
-        "location": [33.93874, 122.29837],
-        "stamp": "October 21, 2018 at 6:23:00 PM UTC-5",
-        "type": ["geotag"],
-        "address" : {
-            "city":"Wichita Falls",
-            "state":"Texas",
-            "street": "123 Main Blvd",
-            "zip": "76308"
-        },
-        "location": [33.93874, 122.29837],
-        "stamp": "October 30, 2018 at 3:25:12 PM UTC-5",
-        "type": ["restaurant"],
-        "address" : {
-            "city":"Wichita Falls",
-            "state":"Texas",
-            "street": "234 Southwest Pkwy",
-            "zip": "76310"
-        },
-        "location": [33.93874, 122.29837],
-        "stamp": "October 24, 2018 at 12:00:00 AM UTC-5",
-        "type": ["work"],
-        "address" : {
-            "city":"Wichita Falls",
-            "state":"Texas",
-            "street": "3410 Taft Blvd",
-            "zip": "76308"
-        },
-    ]
-    "groups" : [
-        "12341345dsad",
-        "adsfwqerf3453"
-    ]
+	"first": "joe",
+	"last": "smith",
+	"email": "joe.smith@gmail.com",
+	"registered": "October 24, 2018 at 12:00:00 AM UTC-5",
+	"locations": [{
+		"location": [33.93874, 122.29837],
+		"stamp": "October 21, 2018 at 6:23:00 PM UTC-5",
+		"type": ["geotag"],
+		"address": {
+			"city": "Wichita Falls",
+			"state": "Texas",
+			"street": "123 Main Blvd",
+			"zip": "76308"
+		}
+	}, {
+		"location": [33.93874, 122.29837],
+		"stamp": "October 30, 2018 at 3:25:12 PM UTC-5",
+		"type": ["restaurant"],
+		"address": {
+			"city": "Wichita Falls",
+			"state": "Texas",
+			"street": "234 Southwest Pkwy",
+			"zip": "76310"
+		}
+	}, {
+		"location": [33.93874, 122.29837],
+		"stamp": "October 24, 2018 at 12:00:00 AM UTC-5",
+		"type": ["work"],
+		"address": {
+			"city": "Wichita Falls",
+			"state": "Texas",
+			"street": "3410 Taft Blvd",
+			"zip": "76308"
+		}
+	}],
+	"groups": [
+		"12341345dsad",
+		"adsfwqerf3453"
+	]
 }
 ```
 
