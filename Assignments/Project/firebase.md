@@ -21,12 +21,12 @@ There will be a user collection that stores general user information along with 
 ___Example Json___:
 ```json
 {
-    'first': 'joe',
-    'last': 'smith',
-    'email': 'joe.smith@gmail.com',
-    'registered': 'October 24, 2018 at 12:00:00 AM UTC-5',
-    'locations': 'sub-collection of locations',
-    'groups' : 'sub-collection of group_ids'
+    "first": "joe",
+    "last": "smith",
+    "email": "joe.smith@gmail.com",
+    "registered": "October 24, 2018 at 12:00:00 AM UTC-5",
+    "locations": "sub-collection of locations",
+    "groups" : "sub-collection of group_ids"
 }
 ```
 **User Locations Collection:**
