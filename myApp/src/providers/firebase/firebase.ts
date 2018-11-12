@@ -11,7 +11,7 @@ import {
     DocumentSnapshotDoesNotExist,
     DocumentSnapshotExists,
 } from 'angularfire2/firestore';
-import { Observable, from } from 'rxjs';
+import { Observable, BehaviorSubject, from, combineLatest } from 'rxjs';
 import { map, tap, take, switchMap, mergeMap, expand, takeWhile } from 'rxjs/operators';
 
 import * as firebase from 'firebase/app';
@@ -27,13 +27,13 @@ type CollectionPredicate<T> = string | AngularFirestoreCollection<T>;
 type DocPredicate<T> = string | AngularFirestoreDocument<T>;
 
 
+
 @Injectable()
 export class FirebaseProvider {
     ///////////////////////////////////////////////////////////////////////////////////////////
 
     // usersCollection: AngularFirestoreCollection<User>;
     // usersObservable: Observable<User[]>;
-
 
     /**
      * 
@@ -48,7 +48,15 @@ export class FirebaseProvider {
         return typeof ref === 'string' ? this.afs.doc<T>(ref) : ref;
     }
 
+    items$: Observable<any>;
+    stateFilter$: BehaviorSubject<string | null>;
+    cityFilter$: BehaviorSubject<string | null>;
 
+
+
+    ///////////////////////////////////////////////////////////////////////////////////////////
+    //CONSTRUCTOR
+    ///////////////////////////////////////////////////////////////////////////////////////////
     /**
      * 
      * @param afs : AngularFirestore reference
@@ -58,44 +66,57 @@ export class FirebaseProvider {
         //this.loadFakeData();
         //this.addFriends();
 
-        //this.inspectCol('users');
+        this.checkIfCollectionExistsTest('asfsdf');
+        this.queryCollectionTest('city', '==', 'Plano');
 
-        // this.getUserDoc("0CDpAEQdbQwAHixAkmzP").then((res)=>{
-        //     let result = {
-        //         message:"getUserDoc",
-        //         res:res
-        //     }
-        //     console.log(result);
-        // });
+        let user = {
+            "id": 999999,
+            "first": "Terry",
+            "last": "Griffin",
+            "email": "terry.griffin@mwsu.edu",
+            "gender": "male",
+            "ip_address": "255.34.23.12",
+            "city": "Wichita Falls",
+            "state": "Texas"
+        };
 
-        this.doc$('users/0CDpAEQdbQwAHixAkmzP').subscribe( (res) => {
-            let result = {
-                "message":"called userdoc",
-                res:res
-            }
-            console.log(result);
-        });
+
+        this.addToGroup(user);
 
     }
 
+    ///////////////////////////////////////////////////////////////////////////////////////////
+    ///////////////////////////////////////////////////////////////////////////////////////////
 
-    // async getUserDoc(id : any){
-    //     return await this.doc$('users/'+id);
-    // }
+    ///////////////////////////////////////////////////////////////////////////////////////////
+    // TESTS
+    ///////////////////////////////////////////////////////////////////////////////////////////
+    getUserTest(id) {
+        this.doc$('users/' + id).subscribe((res) => {
+            let result = {
+                "message": "Find: users/" + id,
+                res: res
+            }
+            console.log(result);
+        });
+    }
 
-    /**
-     * first_name: Ronald
-        last_name: Duplan
-        email: rduplanrh@sina.com.cn
-        gender: Male
-        ip_address: 45.188.235.196
-        lat: 31.6948
-        lon: -106.3
-        city: El Paso
-        image: data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAKGSURBVDjLpVNLaBNBGP5mdpNsHptH25i+0toIRRAFD3rxqCjowaPtzYNYvIleehE8iHgTBO1BBCl4aG+CxZIeWqrFBxVEUXpIwZqmsWuyaZNusu9xdlPxcSp04GP/Heb75pv/QRhj2M+i2OcSbz1+Ny9F5OOVhhXd0W3qckMuGBweuNydw+G67f9dMBDHsprbleJKoSCmU4ns2MXhuGExIoWEf9TJ/zFpf1uGLbQMp3f0nqFTpW7nTNslz+bLKFZMaAbDWtVFUXWxvuWivO1CaTBUNAbLAdarJh68KKOmGVROZw9RzXBIKEDR1xNH/oOCrR0LmThBgJsJCgRB0QOQDBNU6yamX28i2RFHZzLke6JN3fYt5rpj6M/EMbusoNaw0BWjPjHIhRISgdrwyAq6OuPI9cVAdotHNd1pZ5MfzPXGkE5FMLVQ9AkeUeao8nhyrohEIuKfCYt/lVFrtR0Qnh3bsiGJLgb6kph5r2C9ovt4/lZBlu/JQQeU2b6z35kVm4YDz41p2thUG8hmZASDAZRVCa9W6n6jDGdTSHx8Cm3uIcxSAXpnL8oXrgLsjCdgM15bolQ5OS0jLAXgKQ4diGCAwyublp8APk/h5KUrCA0dQetTHl+XpnGU1ZioqaVvhmkPHu4Pk1iYEkId/1bvSYS0O2H55X2cGL0GaXUBWLyDSCKJg9lBHFuYdERz5+fa6euzqZAcjYohgYg8m5SXT+AqlBJQ/t6bG2ui1D0EnL/xp4Vv9yCp10Syl2HKnxWLp0Yu90e/z8Bo/UCT7zXqAlZWUdrTMEU6Mk++vFm0y3oYdSGAmkpQKBGHX/2I7HWcl0YGxjV1Y0xwyKAjsBJnTZzL23d/AbqhIfYa8w35AAAAAElFTkSuQmCC
-        state: Texas
- 
-     */
+    //'city', '==', 'Wichita Falls'
+    queryCollectionTest(p1, test, p2) {
+        return this.col$('users', ref => ref.where(p1, test, p2)).subscribe((res) => {
+            let result = {
+                "message": "Find: " + p1 + " " + test + " " + p2,
+                res: res
+            }
+            console.log(result);
+        });
+    }
+
+    checkIfCollectionExistsTest(collName) {
+        this.colWithIds$(collName).subscribe((res) => {
+            console.log(res);
+        });
+    }
 
     loadFakeData() {
         var data = require("/Users/griffin/Code/Courses/4443-Mobile-Apps/myApp/fb_data.json");
@@ -104,6 +125,7 @@ export class FirebaseProvider {
                 let d = data[k];
                 console.log(d);
                 let user = {
+                    "id": d['id'],
                     "first": d['first_name'],
                     "last": d['last_name'],
                     "email": d['email'],
@@ -115,7 +137,6 @@ export class FirebaseProvider {
                 let location = {
                     'geopoint': this.geopoint(parseFloat(d['lat']), parseFloat(d['lon']))
                 };
-
 
                 this.add('users', user).then((res1) => {
                     this.add(res1.path + "/locations", location).then((res2) => {
@@ -134,36 +155,30 @@ export class FirebaseProvider {
     }
 
 
-    addFriends() {
-        this.colWithIds$('users').subscribe((outer) => {
-            for (var ok in outer) {
-                if (outer.hasOwnProperty(ok)) {
-                    let outer_data = outer[ok];
-                    this.colWithIds$('users').subscribe((inner) => {
-                        for (var ik in inner) {
-                            if (inner.hasOwnProperty(ik)) {
-                                let inner_data = outer[ik];
-                                if(outer_data.city == inner_data.city){
-                                    let doc = {
-                                        id:inner_data.id
-                                    }
-                                    this.add(outer_data.path+ "/friends/"+outer_data.id , doc).then((res) => {
-                                        let result = {
-                                            res:res,
-                                            message:"added friend",
-                                            outer_city:outer_data.city,
-                                            innier_city:inner_data.city
-                                        }
-                                        console.log(result);
-                                    });
-                                }
-                            }
-                        }
+    addToGroup(user) {
+        console.log("Create Group");
+        this.col$('groups', ref => ref.where('name', '==', user.city)).subscribe((resp1) => {
+            let exists = resp1.length > 0;
+            if (!exists) {
+                this.col$('groups').subscribe((resp2) => {
+                    let groupId = resp2.length + 1;
+                    let doc = {
+                        name: name,
+                        id: groupId
+                    }
+                    this.add('groups', doc).then((resp3)=>{
+                        console.log(resp3);
                     });
-                }
+                });
             }
         });
     }
+
+
+
+    ///////////////////////////////////////////////////////////////////////////////////////////
+    // TESTS
+    ///////////////////////////////////////////////////////////////////////////////////////////
 
     ////////////////////////////////////////////////////////////////////////////////////////////
     //Firebase Class Methods
