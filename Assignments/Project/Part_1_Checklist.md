@@ -32,6 +32,7 @@
 - Some examples of information might be:
     - List of teams, team members, and team assignments.
     - Links to the project repo, firebase, and any other pertinent information dealing with the project.
+- github usernames and emails
 
 ### B (Core Components)
     Firestore, location, social media, friends, geotagging, etc.
