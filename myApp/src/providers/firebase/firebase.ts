@@ -66,22 +66,22 @@ export class FirebaseProvider {
         //this.loadFakeData();
         //this.addFriends();
 
-        this.checkIfCollectionExistsTest('asfsdf');
-        this.queryCollectionTest('city', '==', 'Plano');
+        // this.checkIfCollectionExistsTest('asfsdf');
+        // this.queryCollectionTest('city', '==', 'Plano');
 
-        let user = {
-            "id": 999999,
-            "first": "Terry",
-            "last": "Griffin",
-            "email": "terry.griffin@mwsu.edu",
-            "gender": "male",
-            "ip_address": "255.34.23.12",
-            "city": "Wichita Falls",
-            "state": "Texas"
-        };
+        // let user = {
+        //     "id": 999999,
+        //     "first": "Terry",
+        //     "last": "Griffin",
+        //     "email": "terry.griffin@mwsu.edu",
+        //     "gender": "male",
+        //     "ip_address": "255.34.23.12",
+        //     "city": "Wichita Falls",
+        //     "state": "Texas"
+        // };
 
 
-        this.addToGroup(user);
+        //this.addToGroup(user);
 
     }
 
