@@ -10,6 +10,7 @@ Instructions:
 - You MUST put links to the files you worked on, and there must be commits or pull requests mirroring your document. 
 - You should weekly commits or pull requests.
 - This will be a large portion of your participation grade for the project.
+- Your sprint docs should be either a markdown (like this document) or a pdf. NO OTHER FORMATS.
 
 ### Name: Your Name
 ### Date: Date placed in github
