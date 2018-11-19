@@ -25,6 +25,8 @@ export class MapPage {
 
   loadMap() {
 
+    //ionic cordova plugin add https://github.com/mapsplugin/cordova-plugin-googlemaps#multiple_maps --variable API_KEY_FOR_ANDROID="AIzaSyAWdYXZRUjW4vYybrF3EI3EkNtqm1YbDGY" --variable API_KEY_FOR_IOS="AIzaSyAWdYXZRUjW4vYybrF3EI3EkNtqm1YbDGY"
+
     // This code is necessary for browser
     Environment.setEnv({
       'API_KEY_FOR_BROWSER_RELEASE': 'AIzaSyAWdYXZRUjW4vYybrF3EI3EkNtqm1YbDGY',
