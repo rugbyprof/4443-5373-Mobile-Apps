@@ -7,7 +7,7 @@ import { AboutPage } from '../pages/about/about';
 import { ContactPage } from '../pages/contact/contact';
 import { HomePage } from '../pages/home/home';
 import { TabsPage } from '../pages/tabs/tabs';
-
+import { MapPage} from '../pages/map/map';
 import { WelcomePage } from '../pages/welcome/welcome';
 import { LoginPage } from '../pages/login/login';
 import { SignupPage } from '../pages/signup/signup';
@@ -15,7 +15,6 @@ import { SignupPage } from '../pages/signup/signup';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
-import { SignaturePadModule } from 'angular2-signaturepad';
 import { HttpModule } from '@angular/http';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
@@ -24,6 +23,8 @@ import { FirebaseProvider } from '../providers/firebase/firebase';
 import { LocationProvider } from '../providers/location/location';
 
 import { Geolocation } from '@ionic-native/geolocation';
+import { MapProvider } from '../providers/map/map';
+
 
 const firebaseConfig = {
   apiKey: "AIzaSyCdh5VaHpfZclbdkqWw88CvL5sZwUrRUJ8",
@@ -38,6 +39,7 @@ const firebaseConfig = {
   declarations: [
     MyApp,
     AboutPage,
+    MapPage,
     ContactPage,
     HomePage,
     WelcomePage,
@@ -58,6 +60,7 @@ const firebaseConfig = {
     AboutPage,
     ContactPage,
     HomePage,
+    MapPage,
     WelcomePage,
     LoginPage,
     SignupPage,
@@ -69,7 +72,8 @@ const firebaseConfig = {
     FirebaseProvider,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     Geolocation,
-    LocationProvider
+    LocationProvider,
+    MapProvider
   ]
 })
 export class AppModule {}
