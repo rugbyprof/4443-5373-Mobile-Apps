@@ -67,7 +67,7 @@ export class FirebaseProvider {
         //this.addFriends();
 
         // this.checkIfCollectionExistsTest('asfsdf');
-        this.queryCollectionTest('city', '==', 'Plano');
+        // this.queryCollectionTest('city', '==', 'Plano');
 
         // let user = {
         //     "id": 999999,
@@ -85,30 +85,6 @@ export class FirebaseProvider {
 
     }
 
-<<<<<<< HEAD
-        // this.doc$('users/04G6WjXi56LKMhExzubL').subscribe( (res) => {
-        //     let result = {
-        //         "message":"called userdoc",
-        //         res:res
-        //     }
-        //     console.log(result);
-        // });
-
-        // this.getGroupMemberLocations("El Paso").subscribe( (res) => {
-        //     let result = {
-        //         "message":"called getGroupMemberLocations",
-        //         res:res
-        //     }
-        //     console.log(result);
-        // });
-
-    }
-
-    getGroupMemberLocations(groupName:any) {
-        return this.col$('users', ref => ref.where('city', '==', groupName));
-    }
-
-=======
     ///////////////////////////////////////////////////////////////////////////////////////////
     ///////////////////////////////////////////////////////////////////////////////////////////
 
@@ -127,7 +103,7 @@ export class FirebaseProvider {
 
     //'city', '==', 'Wichita Falls'
     queryCollectionTest(p1, test, p2) {
-        return this.colWithIds$('users', ref => ref.where(p1, test, p2)).subscribe((res) => {
+        return this.col$('users', ref => ref.where(p1, test, p2)).subscribe((res) => {
             let result = {
                 "message": "Find: " + p1 + " " + test + " " + p2,
                 res: res
@@ -135,7 +111,6 @@ export class FirebaseProvider {
             console.log(result);
         });
     }
->>>>>>> ae0106fce7c3c080737d9bd02fdef638cba2862e
 
     checkIfCollectionExistsTest(collName) {
         this.colWithIds$(collName).subscribe((res) => {
@@ -144,8 +119,8 @@ export class FirebaseProvider {
     }
 
     loadFakeData() {
-        //var data = require("/Users/griffin/Code/Courses/4443-Mobile-Apps/myApp/fb_data.json");
-        var data = require("/Users/griffin/code/2018_courses/4443-Mobile-Apps/myApp/fb_data.json");
+        var data = require("/Users/griffin/Code/Courses/4443-Mobile-Apps/myApp/fb_data.json");
+       
         for (var k in data) {
             if (data.hasOwnProperty(k)) {
                 let d = data[k];
@@ -158,27 +133,17 @@ export class FirebaseProvider {
                     "gender": d['gender'],
                     "ip_address": d['ip_address'],
                     "city": d['city'],
-                    "state": d['state'],
-                    "current_location": this.geopoint(parseFloat(d['lat']), parseFloat(d['lon']))
+                    "state": d['state']
                 };
 
-<<<<<<< HEAD
-                let groupName = d['city'].replace(" ","_");
-
-
-=======
->>>>>>> ae0106fce7c3c080737d9bd02fdef638cba2862e
                 this.add('users', user).then((res1) => {
-                    this.add(res1.path + "/locationHistory", location).then((res2) => {
+                    this.add(res1.path + "/locations", location).then((res2) => {
                         let doc = {
                             'user_id': res1.id,
                             'loc_id': res2.id,
                             'geopoint': this.geopoint(parseFloat(d['lat']), parseFloat(d['lon']))
                         };
-                        console.log(groupName);
-                        this.add(groupName, doc).then((res3) => {
-                            console.log(res3);
-                        });
+                        console.log(res2);
                     })
                 });
             }
@@ -204,12 +169,6 @@ export class FirebaseProvider {
             }
         });
     }
-
-
-
-    ///////////////////////////////////////////////////////////////////////////////////////////
-    // TESTS
-    ///////////////////////////////////////////////////////////////////////////////////////////
 
     ////////////////////////////////////////////////////////////////////////////////////////////
     //Firebase Class Methods
