@@ -68,7 +68,7 @@ export class FirebaseProvider {
         //     console.log(result);
         // });
 
-        this.doc$('users/0CDpAEQdbQwAHixAkmzP').subscribe( (res) => {
+        this.doc$('users/04G6WjXi56LKMhExzubL').subscribe( (res) => {
             let result = {
                 "message":"called userdoc",
                 res:res
