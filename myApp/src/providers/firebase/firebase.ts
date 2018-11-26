@@ -67,7 +67,7 @@ export class FirebaseProvider {
         //this.addFriends();
 
         // this.checkIfCollectionExistsTest('asfsdf');
-        // this.queryCollectionTest('city', '==', 'Plano');
+        this.queryCollectionTest('city', '==', 'Plano');
 
         // let user = {
         //     "id": 999999,
@@ -103,7 +103,7 @@ export class FirebaseProvider {
 
     //'city', '==', 'Wichita Falls'
     queryCollectionTest(p1, test, p2) {
-        return this.col$('users', ref => ref.where(p1, test, p2)).subscribe((res) => {
+        return this.colWithIds$('users', ref => ref.where(p1, test, p2)).subscribe((res) => {
             let result = {
                 "message": "Find: " + p1 + " " + test + " " + p2,
                 res: res
