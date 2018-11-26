@@ -1,0 +1,34 @@
+[debug] [2018-11-26T02:54:20.026Z] ----------------------------------------------------------------------
+[debug] [2018-11-26T02:54:20.028Z] Command:       /usr/local/Cellar/node/10.9.0/bin/node /usr/local/bin/firebase firestore:delete users -r
+[debug] [2018-11-26T02:54:20.028Z] CLI Version:   6.0.0
+[debug] [2018-11-26T02:54:20.028Z] Platform:      darwin
+[debug] [2018-11-26T02:54:20.028Z] Node Version:  v10.9.0
+[debug] [2018-11-26T02:54:20.029Z] Time:          Sun Nov 25 2018 20:54:20 GMT-0600 (Central Standard Time)
+[debug] [2018-11-26T02:54:20.029Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2018-11-26T02:54:20.038Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-11-26T02:54:20.038Z] > authorizing via signed-in user
+[debug] [2018-11-26T02:54:20.038Z] [iam] checking project msu-location-logger for permissions ["datastore.entities.delete","datastore.entities.list","firebase.projects.get"]
+[debug] [2018-11-26T02:54:20.040Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/msu-location-logger:testIamPermissions  
+
+[debug] [2018-11-26T02:54:28.648Z] Error: read ECONNRESET
+    at TLSWrap.onread (net.js:660:25)
+[error] 
+[error] Error: Server Error. read ECONNRESET
+[debug] [2018-11-26T02:54:41.856Z] ----------------------------------------------------------------------
+[debug] [2018-11-26T02:54:41.859Z] Command:       /usr/local/Cellar/node/10.9.0/bin/node /usr/local/bin/firebase firestore:delete users -r
+[debug] [2018-11-26T02:54:41.859Z] CLI Version:   6.0.0
+[debug] [2018-11-26T02:54:41.859Z] Platform:      darwin
+[debug] [2018-11-26T02:54:41.859Z] Node Version:  v10.9.0
+[debug] [2018-11-26T02:54:41.860Z] Time:          Sun Nov 25 2018 20:54:41 GMT-0600 (Central Standard Time)
+[debug] [2018-11-26T02:54:41.860Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2018-11-26T02:54:41.870Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-11-26T02:54:41.871Z] > authorizing via signed-in user
+[debug] [2018-11-26T02:54:41.871Z] [iam] checking project msu-location-logger for permissions ["datastore.entities.delete","datastore.entities.list","firebase.projects.get"]
+[debug] [2018-11-26T02:54:41.873Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/msu-location-logger:testIamPermissions  
+
+[debug] [2018-11-26T02:55:58.154Z] Error: read ECONNRESET
+    at TLSWrap.onread (net.js:660:25)
+[error] 
+[error] Error: Server Error. read ECONNRESET
