@@ -1,0 +1,7 @@
+{
+  "name": "mapit",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}

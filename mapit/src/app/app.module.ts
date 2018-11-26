@@ -7,24 +7,16 @@ import { AboutPage } from '../pages/about/about';
 import { ContactPage } from '../pages/contact/contact';
 import { HomePage } from '../pages/home/home';
 import { TabsPage } from '../pages/tabs/tabs';
-import { MapPage} from '../pages/map/map';
-import { WelcomePage } from '../pages/welcome/welcome';
-import { LoginPage } from '../pages/login/login';
-import { SignupPage } from '../pages/signup/signup';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import { FirebaseProvider } from '../providers/firebase/firebase';
 
-import { HttpModule } from '@angular/http';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
-
-import { FirebaseProvider } from '../providers/firebase/firebase';
 import { LocationProvider } from '../providers/location/location';
 
-import { Geolocation } from '@ionic-native/geolocation';
-//import { MapProvider } from '../providers/map/map';
-
+import {Geolocation} from '@ionic-native/geolocation'
 
 const firebaseConfig = {
   apiKey: "AIzaSyCdh5VaHpfZclbdkqWw88CvL5sZwUrRUJ8",
@@ -39,17 +31,12 @@ const firebaseConfig = {
   declarations: [
     MyApp,
     AboutPage,
-    MapPage,
     ContactPage,
     HomePage,
-    WelcomePage,
-    LoginPage,
-    SignupPage,
     TabsPage
   ],
   imports: [
     BrowserModule,
-    HttpModule,
     AngularFirestoreModule,
     AngularFireModule.initializeApp(firebaseConfig),
     IonicModule.forRoot(MyApp)
@@ -60,20 +47,15 @@ const firebaseConfig = {
     AboutPage,
     ContactPage,
     HomePage,
-    MapPage,
-    WelcomePage,
-    LoginPage,
-    SignupPage,
     TabsPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
-    FirebaseProvider,
-    {provide: ErrorHandler, useClass: IonicErrorHandler},
     Geolocation,
-    LocationProvider,
-    //MapProvider
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    FirebaseProvider,
+    LocationProvider
   ]
 })
 export class AppModule {}

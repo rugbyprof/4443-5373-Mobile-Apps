@@ -3,17 +3,13 @@ import { Platform } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
-// Delete the ones that are not the start page later.
-// import { WelcomePage } from '../pages/welcome/welcome';
-// import { HomePage } from '../pages/home/home';
-import { SignupPage } from '../pages/signup/signup';
-//import { MapPage } from '../pages/map/map'
+import { TabsPage } from '../pages/tabs/tabs';
 
 @Component({
   templateUrl: 'app.html'
 })
 export class MyApp {
-  rootPage:any = SignupPage;
+  rootPage:any = TabsPage;
 
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) {
     platform.ready().then(() => {

@@ -111,11 +111,11 @@ export class FirebaseProvider {
 
     loadFakeData() {
         //var data = require("/Users/griffin/Code/Courses/4443-Mobile-Apps/myApp/fb_data.json");
-        var data = require("/Users/griffin/code/2018_courses/4443-Mobile-Apps/myApp/fb_data.json");
+        var data = require("/Users/griffin/code/2018_courses/4443-Mobile-Apps/mapit/fb_data.json");
         for (var k in data) {
             if (data.hasOwnProperty(k)) {
                 let d = data[k];
-                console.log(d);
+                //console.log(d);
                 let user = {
                     "first": d['first_name'],
                     "last": d['last_name'],
@@ -127,20 +127,17 @@ export class FirebaseProvider {
                     "current_location": this.geopoint(parseFloat(d['lat']), parseFloat(d['lon']))
                 };
 
-                let groupName = d['city'].replace(" ","_");
+                let groupName = 'Group-'+d['city'].replace(" ","_");
 
 
                 this.add('users', user).then((res1) => {
-                    this.add(res1.path + "/locationHistory", location).then((res2) => {
-                        let doc = {
-                            'user_id': res1.id,
-                            'loc_id': res2.id,
-                            'geopoint': this.geopoint(parseFloat(d['lat']), parseFloat(d['lon']))
-                        };
-                        console.log();
-                        this.add(groupName, doc).then((res3) => {
-                            console.log(res3);
-                        });
+                    let doc = {
+                      'user_id': res1.id,
+                      'geopoint': this.geopoint(parseFloat(d['lat']), parseFloat(d['lon']))
+                    };
+                    this.add(groupName, doc).then((res2) => {
+                        console.log(doc);
+                        console.log(res2);
                     })
                 });
             }
@@ -148,36 +145,36 @@ export class FirebaseProvider {
     }
 
 
-    addFriends() {
-        this.colWithIds$('users').subscribe((outer) => {
-            for (var ok in outer) {
-                if (outer.hasOwnProperty(ok)) {
-                    let outer_data = outer[ok];
-                    this.colWithIds$('users').subscribe((inner) => {
-                        for (var ik in inner) {
-                            if (inner.hasOwnProperty(ik)) {
-                                let inner_data = outer[ik];
-                                if(outer_data.city == inner_data.city){
-                                    let doc = {
-                                        id:inner_data.id
-                                    }
-                                    this.add(outer_data.path+ "/friends/"+outer_data.id , doc).then((res) => {
-                                        let result = {
-                                            res:res,
-                                            message:"added friend",
-                                            outer_city:outer_data.city,
-                                            innier_city:inner_data.city
-                                        }
-                                        console.log(result);
-                                    });
-                                }
-                            }
-                        }
-                    });
-                }
-            }
-        });
-    }
+    // addFriends() {
+    //     this.colWithIds$('users').subscribe((outer) => {
+    //         for (var ok in outer) {
+    //             if (outer.hasOwnProperty(ok)) {
+    //                 let outer_data = outer[ok];
+    //                 this.colWithIds$('users').subscribe((inner) => {
+    //                     for (var ik in inner) {
+    //                         if (inner.hasOwnProperty(ik)) {
+    //                             let inner_data = outer[ik];
+    //                             if(outer_data.city == inner_data.city){
+    //                                 let doc = {
+    //                                     id:inner_data.id
+    //                                 }
+    //                                 this.add(outer_data.path+ "/friends/"+outer_data.id , doc).then((res) => {
+    //                                     let result = {
+    //                                         res:res,
+    //                                         message:"added friend",
+    //                                         outer_city:outer_data.city,
+    //                                         innier_city:inner_data.city
+    //                                     }
+    //                                     console.log(result);
+    //                                 });
+    //                             }
+    //                         }
+    //                     }
+    //                 });
+    //             }
+    //         }
+    //     });
+    // }
 
     ////////////////////////////////////////////////////////////////////////////////////////////
     //Firebase Class Methods
