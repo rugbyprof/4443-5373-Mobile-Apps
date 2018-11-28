@@ -1,16 +1,16 @@
- ## 4443 Mobile Apps - Project - Part 2
+ ## 4443 Mobile Apps - Project - Part 3
 
 ### Team_____________________________________________
 
 | #       | Item                                                                | Value   | Earned |       |
 | :-----: | ------------------------------------------------------------------- | ------: | -----: | :---: |
-| ***1*** | ***Registration MVC***                                              |         |        |       |
-| 1.0     | Form exists                                                         |         |        |       |
-| 1.1     | Submitted form adds user to firestore                               |         |        |       |
-| 1.2     | Submission takes user to login or provides message/link to login.   |         |        |       |
-| ***2*** | ***Login MVC***                                                     |         |        |       |
-| 2.0     | Form exists                                                         |         |        |       |
-| 2.1     | Login authenticates user.                                           |         |        |       |
+| ***1*** | ***Profile Page***                                              |         |        |       |
+| 1.0     | User can edit profile                                                         |         |        |       |
+| 1.1     | User can upload photo                               |         |        |       |
+| 1.2     | User can view profile and subsequently edit.    |         |        |       |
+| ***2*** | ***Multi User Map***                                                     |         |        |       |
+| 2.0     | Map showing each user as some icon on map        |         |        |       |
+| 2.1     | Clicking on icon gives some information about user. |         |        |       |
 | 2.2     | After login, view changes.                                          |         |        |       |
 | ***3*** | ***Use Cases***                                                     |         |        |       |
 | 3.0     | Use cases exist                                                     |         |        |       |
@@ -18,7 +18,8 @@
 | 3.2     | Use cases were detailed enough to get moderate amount of work done. |         |        |       |
 | ***4*** | ***Sprint Docs / Progress***                                        |         |        |       |
 | 4.0     | Each individual has a sprint document on github.                    |         |        |       |
-| 4.1     | Pull requests or commits by majority of gruop exist.                |         |        |       |
+| 4.1     | Pull requests or commits by majority of group exist.                |         |        |       |
+| 4.3     | Correct folder structure and org.                |         |        |       |
 | _       |                                                                     |         |        |       |
 | Totals: | **100**                                                             | **100** |        |       |
 
