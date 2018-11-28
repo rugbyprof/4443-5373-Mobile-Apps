@@ -55,7 +55,7 @@ export class FirebaseProvider {
      */
     constructor(private afs: AngularFirestore) {
         console.log('Hello FirebaseProvider Provider');
-        this.loadFakeData();
+        //this.loadFakeData();
         //this.addFriends();
 
         //this.inspectCol('users');
@@ -68,34 +68,6 @@ export class FirebaseProvider {
         //     console.log(result);
         // });
 
-<<<<<<< HEAD
-    ///////////////////////////////////////////////////////////////////////////////////////////
-    ///////////////////////////////////////////////////////////////////////////////////////////
-
-    ///////////////////////////////////////////////////////////////////////////////////////////
-    // TESTS
-    ///////////////////////////////////////////////////////////////////////////////////////////
-    getUserTest(id) {
-        this.doc$('users/' + id).subscribe((res) => {
-            let result = {
-                "message": "Find: users/" + id,
-                res: res
-            }
-            console.log(result);
-        });
-    }
-
-    //'city', '==', 'Wichita Falls'
-    queryCollectionTest(p1, test, p2) {
-        return this.col$('users', ref => ref.where(p1, test, p2)).subscribe((res) => {
-            let result = {
-                "message": "Find: " + p1 + " " + test + " " + p2,
-                res: res
-            }
-            console.log(result);
-        });
-    }
-=======
         // this.doc$('users/04G6WjXi56LKMhExzubL').subscribe( (res) => {
         //     let result = {
         //         "message":"called userdoc",
@@ -122,7 +94,6 @@ export class FirebaseProvider {
     // async getUserDoc(id : any){
     //     return await this.doc$('users/'+id);
     // }
->>>>>>> 4d26e2e0194434ca23571210a8d982f746193e03
 
     /**
      * first_name: Ronald
@@ -138,81 +109,72 @@ export class FirebaseProvider {
  
      */
 
-    loadFakeData() {
-        var data = require("/Users/griffin/Code/Courses/4443-Mobile-Apps/myApp/fb_data.json");
-       
-        for (var k in data) {
-            if (data.hasOwnProperty(k)) {
-                let d = data[k];
-                console.log(d);
-                let user = {
-                    "first": d['first_name'],
-                    "last": d['last_name'],
-                    "email": d['email'],
-                    "gender": d['gender'],
-                    "ip_address": d['ip_address'],
-                    "city": d['city'],
-                    "state": d['state']
-                };
+    // loadFakeData() {
+    //     //var data = require("/Users/griffin/Code/Courses/4443-Mobile-Apps/myApp/fb_data.json");
+    //     var data = require("/Users/griffin/code/2018_courses/4443-Mobile-Apps/mapit/fb_data.json");
+    //     for (var k in data) {
+    //         if (data.hasOwnProperty(k)) {
+    //             let d = data[k];
+    //             //console.log(d);
+    //             let user = {
+    //                 "first": d['first_name'],
+    //                 "last": d['last_name'],
+    //                 "email": d['email'],
+    //                 "gender": d['gender'],
+    //                 "ip_address": d['ip_address'],
+    //                 "city": d['city'],
+    //                 "state": d['state'],
+    //                 "current_location": this.geopoint(parseFloat(d['lat']), parseFloat(d['lon']))
+    //             };
 
-<<<<<<< HEAD
-=======
-                let groupName = d['city'].replace(" ","_");
-
-
->>>>>>> 4d26e2e0194434ca23571210a8d982f746193e03
-                this.add('users', user).then((res1) => {
-                    this.add(res1.path + "/locations", location).then((res2) => {
-                        let doc = {
-                            'user_id': res1.id,
-                            'loc_id': res2.id,
-                            'geopoint': this.geopoint(parseFloat(d['lat']), parseFloat(d['lon']))
-                        };
-<<<<<<< HEAD
-                        console.log(res2);
-=======
-                        console.log();
-                        this.add(groupName, doc).then((res3) => {
-                            console.log(res3);
-                        });
->>>>>>> 4d26e2e0194434ca23571210a8d982f746193e03
-                    })
-                });
-            }
-        }
-    }
+    //             let groupName = 'Group-'+d['city'].replace(" ","_");
 
 
-    addFriends() {
-        this.colWithIds$('users').subscribe((outer) => {
-            for (var ok in outer) {
-                if (outer.hasOwnProperty(ok)) {
-                    let outer_data = outer[ok];
-                    this.colWithIds$('users').subscribe((inner) => {
-                        for (var ik in inner) {
-                            if (inner.hasOwnProperty(ik)) {
-                                let inner_data = outer[ik];
-                                if(outer_data.city == inner_data.city){
-                                    let doc = {
-                                        id:inner_data.id
-                                    }
-                                    this.add(outer_data.path+ "/friends/"+outer_data.id , doc).then((res) => {
-                                        let result = {
-                                            res:res,
-                                            message:"added friend",
-                                            outer_city:outer_data.city,
-                                            innier_city:inner_data.city
-                                        }
-                                        console.log(result);
-                                    });
-                                }
-                            }
-                        }
-                    });
-                }
-            }
-        });
-    }
+    //             this.add('users', user).then((res1) => {
+    //                 let doc = {
+    //                   'user_id': res1.id,
+    //                   'geopoint': this.geopoint(parseFloat(d['lat']), parseFloat(d['lon']))
+    //                 };
+    //                 this.add(groupName, doc).then((res2) => {
+    //                     console.log(doc);
+    //                     console.log(res2);
+    //                 })
+    //             });
+    //         }
+    //     }
+    // }
+
+
+    // addFriends() {
+    //     this.colWithIds$('users').subscribe((outer) => {
+    //         for (var ok in outer) {
+    //             if (outer.hasOwnProperty(ok)) {
+    //                 let outer_data = outer[ok];
+    //                 this.colWithIds$('users').subscribe((inner) => {
+    //                     for (var ik in inner) {
+    //                         if (inner.hasOwnProperty(ik)) {
+    //                             let inner_data = outer[ik];
+    //                             if(outer_data.city == inner_data.city){
+    //                                 let doc = {
+    //                                     id:inner_data.id
+    //                                 }
+    //                                 this.add(outer_data.path+ "/friends/"+outer_data.id , doc).then((res) => {
+    //                                     let result = {
+    //                                         res:res,
+    //                                         message:"added friend",
+    //                                         outer_city:outer_data.city,
+    //                                         innier_city:inner_data.city
+    //                                     }
+    //                                     console.log(result);
+    //                                 });
+    //                             }
+    //                         }
+    //                     }
+    //                 });
+    //             }
+    //         }
+    //     });
+    // }
 
     ////////////////////////////////////////////////////////////////////////////////////////////
     //Firebase Class Methods
