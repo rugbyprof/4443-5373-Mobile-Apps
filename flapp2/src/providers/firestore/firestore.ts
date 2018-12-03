@@ -16,6 +16,10 @@ import { map, tap, take, switchMap, mergeMap, expand, takeWhile } from 'rxjs/ope
 
 import * as firebase from 'firebase/app';
 
+import { GeoJson } from '../../providers/map/geoJson';
+import { environment } from '../../../environment';
+import * as mapboxgl from 'mapbox-gl';
+
 // export interface User {
 //     email: string;
 //     first: string;
@@ -28,7 +32,7 @@ type DocPredicate<T> = string | AngularFirestoreDocument<T>;
 
 
 @Injectable()
-export class FirebaseProvider {
+export class FirestoreProvider {
     ///////////////////////////////////////////////////////////////////////////////////////////
 
     // usersCollection: AngularFirestoreCollection<User>;
@@ -55,6 +59,8 @@ export class FirebaseProvider {
      */
     constructor(private afs: AngularFirestore) {
         console.log('Hello FirebaseProvider Provider');
+
+        mapboxgl.accessToken = environment.mapbox.accessToken
         //this.loadFakeData();
         //this.addFriends();
 
@@ -86,8 +92,10 @@ export class FirebaseProvider {
 
     }
 
-    getGroupMemberLocations(groupName:any) {
-        return this.col$('users', ref => ref.where('city', '==', groupName));
+    createMarker(data: GeoJson) {
+      this.add('/markers',data).then((res)=>{
+        return res;
+      })
     }
 
 
