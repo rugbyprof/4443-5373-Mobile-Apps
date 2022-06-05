@@ -2,7 +2,7 @@
 
 ### Roster
 
-![](https://d3vv6lp55qjaqc.cloudfront.net/items/220B0V0H3c041K2p251Z/google-sheets-16.png?X-CloudApp-Visitor-Id=1094421) [Class Roster](https://docs.google.com/spreadsheets/d/1f8bAaOnt9maLomWO3WWXTwb7yqCbTVavk1FJo-BNYL4/edit?usp=sharing)
+![](https://d3vv6lp55qjaqc.cloudfront.net/items/220B0V0H3c041K2p251Z/google-sheets-16.png?X-CloudApp-Visitor-Id=1094421) [Class Roster](https://docs.google.com/spreadsheets/d/1xZNZ8KhSXz8zoj6BC1b4Zktr6jyAqrtLizh_3wVo-Xo/edit#gid=0)
 
 ### Days Time Location
 
