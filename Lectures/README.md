@@ -1,6 +1,9 @@
 ## Lectures
 
-### Repl.it
+| Folder | Title | Description | Due | Filename |
+|-----|-----|-----|-----|-----|
+| None | None | None | None | None |
 
--   Intro to "requests" the beginning of Api's
-    -   https://replit.com/@rugbyprof?path=folder/4443_Mob_Apps
+<sup>Last Updated: 2022-06-05 (Sun @ 16:07)</sup> 
+
+<sup>***Days Left is only accurate if the `Last Updated` date is the same as todays date. Otherwise, use the due date!***</sup> 
