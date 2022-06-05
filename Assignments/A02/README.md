@@ -1,140 +1,246 @@
-## Dev Environment - Setting up a local dev environment
-### Due: September 14<sup>th</sup> by 5:00 pm
+## Assignment 2 - Github Setup
 
-## Required Packages
+#### Due: 06-06-2022 (Monday @ 12:30 p.m.)
 
-- Some version of a Linux Shell:
-    - [Windows Version](https://www.howtogeek.com/249966/how-to-install-and-use-the-linux-bash-shell-on-windows-10/)
-    - [Git Bash](https://git-scm.com/downloads)
-- An Editor like Visual Studio Code:
-    - https://code.visualstudio.com/
-- Install NodeJS
-    - https://nodejs.org/en/download/
+The 1 way communication is you communicating with me and others with the descriptions and instructions you push to your Github repo. This file provides the instructions that will help you format each assignments README file so they are consistent and informative. I discuss README's below. Remember this file as a reference for turning in all of your assignments.
 
-## Getting Started
+## Github
 
-### Linux Shell
-- Install a linux shell (see links above).
+<img src="https://cs.msutexas.edu/~griffin/zcloud/zcloud-files/github_icon_2022.png" width="50">
 
-- Then using your shell, install [Node.js](https://nodejs.org/en/download/) for your platform. The Node Package Manager is included in the Node.js distribution. 
+If you have had me before, and this seems **TL;DR** make sure you:
 
-- Open a new terminal (command prompt) and check that `node` and `npm` (node package manager) actually exist. To test that you've got Node.js correctly installed on your computer, type `node --help` and you should see the usage documentation. Or type `which node` or `which npm` to see where they are installed. If you get `node not found` or `npm not found` then check your installation.
+-   Scroll past the Git intro and view:
+    -   Make sure you create your repo correctly with the proper `README.md`
+    -   Remember how to use [Markdown](https://guides.Github.com/features/mastering-markdown/)
+    -   Rules for organizing your repo (pretty much the same)
+    -   README files in general
+    -   General expectations for all assignments turned in
 
-### IDE
+---
 
-- Install [Visual Studio Code](https://code.visualstudio.com/) and then install the following VS Code extensions (The links are just to make sure you get the correct extension, not needed to actually install):
-    - Live Server https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer
-    - Beautify https://marketplace.visualstudio.com/items?itemName=HookyQR.beautify
-    - Code Runner https://marketplace.visualstudio.com/items?itemName=formulahendry.code-runner
+In addition to our team chat and code editor, we will be using `version control` software to organize all of our code. WHAT?!?! **Version Control**?? Please trust me when I say you will be better for using some kind of version control. In this case we will use `git` (the version control software) in conjunction with `Github` a web site that makes your programs publicly viewable. There is a bit of a learning curve, but you will thank me for it.
 
-**Installing extensions:**
+#### What is Git?
 
-<img src="https://cl.ly/c3c9733e5d5b/Screen%252520Recording%2525202018-08-29%252520at%25252008.33%252520PM.gif" width="600">
+Don't let the following definitions scare you. We will use `git` and `Github` at a very basic (simple) level.
 
-1. Click on the extensions button on the left.
-2. Type in your search term in the text box.
-3. Click `install`
-4. Click `reload` (you can install multiple before re-loading).
-    
+However lets define it:
 
-## Basic Commands
+> `Git` is a distributed revision control and source code management (SCM) system with an emphasis on speed,data integrity,and support for distributed, non-linear workflows. Git was initially designed and developed by Linus Torvalds for Linux kernel development in 2005, and has since become the most widely adopted version control system for software development.<br><br>
+> As with most other distributed revision control systems, and unlike most client–server systems, every Git working directory is a full-fledged repository with complete history and full version-tracking capabilities, independent of network access or a central server. Like the Linux kernel, Git is free software distributed under the terms of the GNU General Public License [[1]](http://en.wikipedia.org/wiki/Git_(software)).
 
-- Open your terminal if its not open.
-- Type `pwd` (print working directory). It tells you where you are (folder wise).
-- Type `ls` to see your files. This is a short listing (not very helpful in my opinion).
-- Type `ls -lah`. The `l` means long, the `a` means all, and the `h` means human readable (changes file size from bytes to K, M, and G). (Notice the `.` and the `..` at the top? Those are references to "here" (1 dot) and "parent" (2 dots).  Seems silly, but we use those in commands (you'll see).
-- If you want to move around (change directories) type: `cd dir_name` . This will change your directory to `dir_name`.
-- If you want to back out of a directory type: `cd ..` (See! We use them). The dotdot means "backup".
-- If you want to refer to "your current directory", you can use the `.` . 
-- To create a directory, type: `mkdir dir_name`.
+So, `Git` is **distributed revision control system** (version control). This is just a fancy way of letting us manage our code. In fact, I really only want to use git so you can `push` our code to a repository that I can access so I can download and run your code. `Github` is such a place.
 
-**Also!**
+> `Github` is a social site that allows programmers to share code with other programmers. It's also a great place to discover projects to work on, discover code to use in your own projects, and a great place to start a portfolio. Whereas `Git` is simply the revision control system that can be installed anywhere, and only used locally if that's the users choice.
 
-- Remember your :arrow_up: and :arrow_down: arrows! These will step through your previous commands.
-- Type `history` to see ALL the commands you've type EVER!
+Remember though: `Git != Github`, Git does version control, but has commands built in to `push` your code to a repository on another computer. This other computer that we will use is `Github`.
 
-## Hello World App
+#### Why Github for this course?
 
-Let's get started by creating a "Hello World" `Node.js` app.
+I use Github as a home-base for all assignments, lectures, and resources. It's basically our courses homepage. That is why I use it. When you push your code to Github, you are placing your code in a central location irregardless of what computer your working on. If you do some work in the lab, you can `push` your changes to Github. If you go home, you can `pull` your changes to your home machine and continue working. If you only work on a single machine, like a laptop, then Github can be your "backup" copy.
 
-Create an empty folder called "hello_world", navigate into it and open VS Code:
+#### Create a Github account.
 
-```bash
-mkdir hello_world
-cd hello_world
-code .
+-   You shouldn't need this tutorial, but just in case:
+
+    -   https://www.wikihow.com/Create-an-Account-on-Github
+
+-   When you create a Github account, you must choose a `username`.
+-   This is very important to remember, because you will update the class roster with this username so I know where to find all your assignments.
+-   Create a repository named:
+    -   `4553-Mob-Apps-YourLastName`
+    -   replace the `YourLastName` with your last name to make it unique.
+-   Check the box that says: "Add a README.md file"
+
+#### Edit the README.md
+
+-   A readme file is a file that gets displayed when you are viewing a folder on Github. So we place a README.md in the repo's folder so we can display information about the repo. Likewise, any README.md in a folder is used to display information about the folder it is in.
+-   Edit the readme file on Github and place your contact information inside along with a picture of YOU. NOT an avatar. NOT a thumbnail. But an easily identifiable picture of you.
+-   Your readme should include:
+    -   Your first and last name
+    -   Your email address
+    -   Your website (if you have one)
+    -   Your image
+    -   Slack / Github avatar
+
+## Example README.md
+
+If you're not familiar with `markdown` you can go [here](https://guides.Github.com/features/mastering-markdown/) to get an idea of what it can do for you. It's basically a simple syntax that you can use to format files. Use the template below to get your `README` started. It is from a different course, but the template is the same:
+
+```md
+## Albert Einstein
+
+#### Repo: 4553 Spatial DS Repo
+
+#### Email: albert.einstein@yahoo.com
+
+#### Website: https://en.wikipedia.org/wiki/Albert_Einstein
+
+#### Image:
+
+![Albert Einstein](https://cs.msutexas.edu/~griffin/zcloud/zcloud-files/einstein_200px.png)
+
+#### Avatar:
+
+![Avatar](https://cs.msutexas.edu/~griffin/zcloud/zcloud-files/einstein_avatar.png)
 ```
 
-> Note: `code .` means open VS Code in the current directory. (See I told you we use the . and .. ).
+**_will result in_**
 
-- VS Code is now open and your `hello_world` folder is loaded. 
-- Create a file called `app.js` and put the following in it:
+---
 
-```js
-var msg = 'Hello World';
-console.log(msg);
+<img src="https://cs.msutexas.edu/~griffin/zcloud/zcloud-files/repo_readme_example_4553.png" width="600">
+
+---
+
+## Organizing Your Repo
+
+-   Create an `Assignments` folder inside your Github repository
+-   In the `Assignments` folder, create a `README.md` file that has the following in it:
+
+```md
+## Assignments Folder
+
+|  #  | Folder Link | Assignment Description |
+| :-: | ----------- | ---------------------- |
+|     |             |                        |
 ```
 
-- You can now run this code a couple of different ways.
-    1. Since we installed `code runner` you can simply right click and choose `Run Code`. It should open up a mini terminal in your IDE and show the output.
-    2. Or go back to your terminal and type `node app.js` to run it (the integrated terminal doesn't need code runner installed, but it does make it a little easier).
-    
-## Express Server App
+-   This will be a table in the root of your folder that will eventually hold a link to each assignment uploaded to Github.
+-   Your table will initially look very sad and empty like below:
 
-Install the Express Generator by running the following from a terminal:
+<img src="https://cs.msutexas.edu/~griffin/zcloud/zcloud-files/assignments_table_1_4443_2020.png" width="300">
 
-```bash
-npm install -g express-generator
+---
+
+But then it will improve as you add rows to the table which link to each project:
+
+<img src="https://cs.msutexas.edu/~griffin/zcloud/zcloud-files/assignments_table_2_4443_2020.png" width="300">
+
+---
+
+-   Eventually you will create a directory structure that should look structurally similar to the example below (names will be different).
+-   But this is the structure that I expect your `Assignments` folder to follow. Any files outside of the `Assignments` folder are not any of my concern and you can organize as you see fit.
+
+### Example Repo Directory Structure
+
+```
+.
+└── 3013-Spatial-DS-YourName        (main repo folder)
+    ├── Assignments                 (assignments folder)
+    │   ├── A01                     (single assignment folder)
+    │   │   ├── README.md           (assignment readme)
+    │   │   ├── code_file_1.cpp     (assignment files)
+    │   │   ├── code_file_2.cpp
+    │   │   └── code_file_x.hpp
+    │   ├── A02
+    │   │   ├── README.md
+    │   │   ├── code_file_1.cpp
+    │   │   ├── code_file_2.h
+    │   │   └── code_file_x.cpp
+    │   ├── AXX
+    │   │   ├── README.md
+    │   │   ├── code_file_1.cpp
+    │   │   ├── code_file_2.hpp
+    │   │   └── code_file_x.cpp
+    │   ├── P01
+    │   │   ├── README.md
+    │   │   ├── code_file_1.cpp
+    │   │   ├── code_file_2.cpp
+    │   │   └── code_file_x.cpp
+    │   ├── P02
+    │   │   ├── README.md
+    │   │   ├── code_file_1.cpp
+    │   │   ├── code_file_2.cpp
+    │   │   └── code_file_x.cpp
+    │   ├── PXX
+    │   │   ├── README.md
+    │   │   ├── code_file_1.cpp
+    │   │   ├── code_file_2.cpp
+    │   │   └── code_file_x.cpp
+    |   └── README.md               (this is the assignments folder readme)
+    └── README.md                   (this is your main repo readme)
+
+
+
 ```
 
-The `-g` switch installs the Express Generator globally on your machine so you can run it from anywhere.
+## README's In General
 
-We can now scaffold a new Express application called `myExpressApp` by running:
+Every single folder on your repo should contain a `README.md`. This is because when I or someone else looks at your repo, and clicks on a folder, they will see not just a directory listing, but an explanation and description of what that folder contains. I'm not making you create README's to be an ass ... I promise. It simply adds credibility to your repo, and makes you look like you know what your doing (and care and visitors to your site). I understand that a lot (if not most) probably don't want anyone looking at your repo, but you should still put your best foot forward. When I browse repos on Github, I not only rely on the README files for information, but find myself judging the software or library based on how organized and descriptive the README's are. And after talking to other developers, I found that I'm not the only one.
 
-```bash
-express myExpressApp
+## README's For Assignments
+
+More [HERE](../../Resources/01-Readmees/README.md)
+
+We will use the README's that you will create in every assignment folder to do the following:
+
+-   Top of the README:
+    -   Project Title
+    -   Your name
+    -   Project Description (It needs to be "descriptive". You can take text straight from the assignment / requirements with a little additions here and there.)
+-   After description:
+    -   List all the files and or folders in that current project in a tabular format with a small description of each file.
+    -   The filename in that table should link to the actual code file or folder.
+-   After table:
+    -   Instructions
+        -   Any and all information needed to run your code.
+        -   These instructions will be used for others in the class to run your project on their machine. I PROMISE: you will learn very fast how not to assume things just work. Because they DON'T. When your code doesn't run on anyone else's system and you get a zero, I bet you start to let "assumptions" go out the window.
+
+### Common Errors
+
+-   Common Errors / Reasons for projects not to run (we can grow a similar list as the class goes on to help everyone get past common pitfalls):
+    -   Local libraries that you installed and not everyone else did the same.
+    -   Accessing files or fonts using local paths that will not be the same on running on someone else's machine (this one is annoying).
+        -   Example:
+            -   Your path: `C:\my_documents\pythonProjects\PyCharm\P01\Helvetica.ttf`
+            -   My Path: `/User/griffin/Projects/P01/Helvetica.ttf`
+            -   We both have P01 folders looking for `Helvetica.ttf`, but the whole path is different. We will also discuss this in class (relative vs absolute paths).
+    -   Hard-coding names of external resources that you do not provide:
+        -   Example: You called your data file **"data.txt"** and use: `open("data.txt")` I called my file **"data.dat"** and now your program crashes.
+        -   Solution: Read in the filename when the user runs your program, so you get the proper local name ( I will discuss in class argv or command line params)
+
+## Example Assignment README
+
+```
+## P02 - Bouncy Balls
+### Sally Smith
+### Description:
+
+Bacon ipsum dolor amet pork loin kielbasa pork, drumstick leberkas shankle strip steak fatback beef ribs ham hock.
+Pork short ribs doner andouille cupim pastrami picanha landjaeger pig. Salami swine capicola spare ribs boudin
+leberkas. Capicola ground round pork meatloaf, ham jowl swine prosciutto bacon alcatra pancetta burgdoggen pig
+spare ribs leberkas. Shankle fatback ground round, porchetta frankfurter cupim venison strip steak pig meatball
+biltong filet mignon. Shoulder chislic ground round pork burgdoggen hamburger.
+
+### Files
+
+|   #   | File            | Description                                        |
+| :---: | --------------- | -------------------------------------------------- |
+|   1   | Main.cpp         | Main driver of my project that launches game.      |
+|   2   | HelperClass.cpp  | Helper class that holds movement functions         |
+|   3   | TextureClass.cpp | Helper class that assists with textures and images |
+
+### Instructions
+
+- Make sure you install library `blahblah.cpp`
+- My program expects two parameters to be placed on the command line when you run the program.
+- Parameters `<input file> <number of players>`
+- The input file should be formatted with a players name and age on a seperate line:
+
++------------+
+| name1 age1 |
+| name2 age2 |
+| etc...     |
++------------+
+
+- Example Command:
+    - `python <code> <input file> <num players>`
+    - `python main.cpp input.txt 3`
+
 ```
 
-This creates a new folder called `myExpressApp` with the contents of your application. To install all of the application's dependencies (again shipped as NPM modules), go to the new folder and execute `npm install`:
+The above markdown will produce a README that looks like:
 
-```bash
-cd myExpressApp
-npm install
-```
-
-At this point, we should test that our application runs. The generated Express application has a `package.json` file which includes a `start` script to run `node ./bin/www`. This will start the Node.js application running.
-
-From a terminal in the Express application folder, run:
-
-```bash
-npm start
-```
-
-You can also run the following to get the same result:
-
-```bash
-node ./bin/www
-```
-
-The Node.js web server will start and you can browse to `http://localhost:3000` to see the running application.
-
-If you run it like below, you can specify your port:
-
-```bash
-PORT=8023 node ./bin/www
-```
-
-The Node.js web server will start and you can browse to `http://localhost:8023` to see the running application.
-
-## What to show Griffin
-
-- Using the `myport` exe included in this folder, run `./myport yourlastname` to get your unique port number to show me. 
-- The 'dot slash' in front of the `myport` exe is necessary.
-- If it won't run, try: `chmod +x myport` to add execute permissions to it.
-
-## Helpful Links
-
-- https://code.visualstudio.com/docs/nodejs/nodejs-tutorial
-- https://www.howtogeek.com/249966/how-to-install-and-use-the-linux-bash-shell-on-windows-10/
-- https://www.howtogeek.com/261449/how-to-install-linux-software-in-windows-10s-ubuntu-bash-shell/
-  
+<img src="https://cs.msutexas.edu/~griffin/zcloud/zcloud-files/assignmet_readme_example_2020.png" width="600">

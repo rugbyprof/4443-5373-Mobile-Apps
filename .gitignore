@@ -1,2 +1,5 @@
-Private/
-node_modules/
+.*
+!.gitignore
+!.clang-format
+
+venv/
