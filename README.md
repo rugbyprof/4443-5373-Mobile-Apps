@@ -113,7 +113,7 @@ Grading as of the recent past has become a fluid endeavor. Projects (programs) d
   - Any communication I receive from ya'll in a DM will be redirected by me to the course channel. I will leave your name out of my comment if explicitly asked, but good questions deserve credit, so I usually give credit where it is due. I will **never** out someone or try and embarrass someone based on private conversations between myself and that person. Unless you get embarrassed by praise and accolades, since that's the only way I mention a name in the public channel based on a private conversation (DM).
 
 - **Presentation(s)**:
-  - Presentations may be individual or with a group. 
+  - Presentations may be individual or with a group (instructor preference). 
   - The presentation should show and discuss a specified project. Your discussing will include: 
     - The positives, and negatives of your project. 
     - Positives may include something cool, above and beyond the requirements, or something you discovered that was rememberable.
