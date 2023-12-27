@@ -78,7 +78,10 @@
 
 ## Grading
 
-Programs as a homework used to be the majority of a grade in a programming class. But with the big changes over the last few years I find myself focusing on other things. Therefore this course will be more about explaining and presenting your apps or projects to the class and myself. Also, your documentation throughout the code will be highly scrutinized to ensure you wrote it yourself, or perfectly understand it if you have found (and cited) other code to use. 
+Grading as of the recent past has become a fluid endeavor. Projects (programs) do not have the same integrity that they once did in assessing a students knowledge. Exams, like always, evaluate a students ability to memorize, cram information, or cheat I dare say, all without really understanding the topics. So I'm going for a more hands on / oral examination approach with projects and code reviews. The grade scale below is not complete, but will change as our class moves forward. I will use a democratic approach to determining a final grading scale ensuring the majority of the class agrees with the weights for each category. I will reserve the right to veto ridiculous organized labor's ideas (aka class getting together and all agreeing on something ridiculous), but will in good faith try to listen to the class within reason. You can assume that every category will have a minimum of 10% with two exceptions:
+
+1. Exams: we may not have any
+2. Participation: it may be as low as 5%
 
 | Categories    | Portion of Course | ::: | Letter Grade | Grade Range |
 | :------------ | :---------------: | --- | :----------: | :---------: |
