@@ -114,11 +114,11 @@ Grading as of the recent past has become a fluid endeavor. Projects (programs) d
 
 - **Presentation(s)**:
   - Presentations may be individual or with a group (instructor preference). 
-  - The presentation should show and discuss a specified project. Your discussing will include: 
+  - The presentation should show and discuss a specified project. Your discussion will include: 
     - The positives, and negatives of your project. 
-    - Positives may include something cool, above and beyond the requirements, or something you discovered that was rememberable.
-    - Negatives may include the troubles getting particular requirements to work or particular components you had trouble getting to work. Basically, the portions of the project you had the worst time with.
-    - Always ask yourself about performance. Did it come into play? Did you think about efficiency at any point in fulfilling a requirement?   
+      - Positives may include something cool, above and beyond the requirements, or something you discovered that was rememberable.
+      - Negatives may include the troubles getting particular requirements to work or particular components you had trouble getting to work. Basically, the portions of the project you had the worst time with.
+    - Always ask yourself about code efficiency. Did it come into play? Did you think about it at any point in fulfilling a specific requirement? Was efficiency not an issue at all? 
     - What was the funnest part of the project?
     - What was the most difficult part of the project?
   - Showing code specific portions of your code for the above items is a good way to help you walk your viewers through each of the points mentioned above.
