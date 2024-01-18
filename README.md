@@ -1,4 +1,4 @@
-# 4443 Mobile Apps
+# 4443 - 5373 - Mobile Apps
 
 ### Roster
 <a href="https://docs.google.com/spreadsheets/d/1Ho6uAP-2KbAX4f_sv9KdA5Eszz7feF5p0I5YRFrXcfQ/edit?usp=sharing"><a href="https://imgbox.com/I0dU5rrM" target="_blank"><img src="https://images2.imgbox.com/38/ed/t8796trL_o.png" alt="image host" width="20"/></a> Class Roster</a> 
@@ -29,8 +29,8 @@
 - [ ] Styling and Responsive Design
 - [ ] State and Props in React Components
 - [ ] Handling User Input and Forms
-- [ ] Navigation in React Native (Stack, Tab, Drawer)
-- [ ] Fetching and Displaying Data from APIs
+- [x] Navigation in React Native (Stack, Tab, Drawer)
+- [x] Fetching and Displaying Data from APIs
 - [ ] Local Storage and Data Persistence
 - [ ] Animations and Gestures
 - [ ] Testing with Jest and Debugging Techniques
@@ -274,3 +274,19 @@ In order to help students keep track of their progress toward course objectives,
 Visit[ MSU’s Registrars ](https://msutexas.edu/registrar/_assets/files/pdfs/fall23front.pdf.)website[ Important Dates ](https://msutexas.edu/registrar/_assets/files/pdfs/fall19front.pdf) https://msutexas.edu/registrar/\_assets/files/pdfs/fall23front.pdf 
 
 
+# End syllabus
+
+## Q1
+I would like to tweak my previous query about react native. I will be teaching an undergraduate course in which I cannot assume knowledge of html or javascript. I don't want to spend a lot of time on those two topics, but I feel it would be necessary. I could also continue to add in javascript throughout the 15 week semester to address current topics we are covering. 
+
+
+I asked you previously about a curriculum for teaching a course in React Native to undergrad students. I'm going to ask again but with some specific requests if thats ok. The following list will provide the additional details I would like to incorporate:
+
+- Course length 15 weeks
+- Main topic is React Native
+- Students are not expected to know html or javascript, so those will have to be covered as quickly as possible.
+- Most students do not understand the client server model. I will let them develop via local host initially, but by the end of the semester, I would like all of them to obtain a cheap server through a service like Digital Ocean (Github Developer pack provides free server time to students via Digital Ocean) to host their apps. 
+- Initial assignments obviously should be very easy and not incorporate api's or databases. 
+- I would like to introduce sqlite as well as local storage to the class. 
+- One project will have to include a backend api using mongodb as a database. This can be introduced as early as your knowledge base would recommend. I'm not sure if I should use Python Fast-API or stick with something more javascript like NodeJs to run server side. 
+- Css is important, but I want to use as many stock or pre-created styles as possible. 
