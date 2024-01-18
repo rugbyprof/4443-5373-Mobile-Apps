@@ -6,7 +6,8 @@
 <a href="https://docs.google.com/spreadsheets/d/1zWZb8OeQ5sQt3oHz_x_Cvm-HS9WrMOl2jKY8DjignGA/edit?usp=sharing"><img src="https://images2.imgbox.com/38/ed/t8796trL_o.png" alt="image host" width="20"/> &nbsp;&nbsp; 5373 - Class Roster</a> 
 
 ### General Course Info
-- __Days:__ TR 11:00 a.m. - 12:20 p.m. 
+- __Days:__ **4443**: TR 11:00 a.m. - 12:20 p.m. 
+- __Days:__ **5373**: TR 16:00 a.m. - 17:20 p.m. 
 - __Location:__ BO 109
 - [__Semester:__](http://tinyurl.com/msucal2324) Tuesday January 16<sup>th</sup> - Friday May 3<sup>rd</sup>
 - [__Holidays:__](http://tinyurl.com/msucal2324)
@@ -14,7 +15,8 @@
   - __Easter__ Monday March 27<sup>th</sup> - Friday March 29<sup>th</sup>
 - [__Last Day for “W”:__](http://tinyurl.com/msucal2324)  Monday March 25<sup>th</sup>
 - [__Last Day of Class:__](http://tinyurl.com/msucal2324) Friday May 3<sup>rd</sup>
-- [__Final Exam:__](http://tinyurl.com/msufinals24) Tuesday, May 7<sup>th</sup> @ 1:00pm – 3:00pm (same room)
+- [__Final Exam:__]**4443**: (http://tinyurl.com/msufinals24) Tuesday, May 7<sup>th</sup> @ 1:00pm – 3:00pm (same room)
+- [__Final Exam:__]**5373**: (http://tinyurl.com/msufinals24) Tuesday, May 7<sup>th</sup> @ 5:45pm – 7:45pm (same room)
 
 ## Office Hours
 
