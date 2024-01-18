@@ -15,6 +15,6 @@
 | ***<a href="https://github.com/rugbyprof/4443-5373-Mobile-Apps/tree/master/Lectures/L09">L09</a>*** | ***<a href="https://github.com/rugbyprof/4443-5373-Mobile-Apps/tree/master/Lectures/L09">None</a>*** | ***<a href="https://github.com/rugbyprof/4443-5373-Mobile-Apps/tree/master/Lectures/L09">None</a>*** | ***<a href="https://github.com/rugbyprof/4443-5373-Mobile-Apps/tree/master/Lectures/L09">None</a>*** | ***<a href="https://github.com/rugbyprof/4443-5373-Mobile-Apps/tree/master/Lectures/L09">N/A</a>*** |  |
 | ***<a href="https://github.com/rugbyprof/4443-5373-Mobile-Apps/tree/master/Lectures/L10">L10</a>*** | ***<a href="https://github.com/rugbyprof/4443-5373-Mobile-Apps/tree/master/Lectures/L10">None</a>*** | ***<a href="https://github.com/rugbyprof/4443-5373-Mobile-Apps/tree/master/Lectures/L10">None</a>*** | ***<a href="https://github.com/rugbyprof/4443-5373-Mobile-Apps/tree/master/Lectures/L10">None</a>*** | ***<a href="https://github.com/rugbyprof/4443-5373-Mobile-Apps/tree/master/Lectures/L10">N/A</a>*** |  |
 
-<sup>Last Updated: 2024-01-17 (Wed @ 21:44)</sup> 
+<sup>Last Updated: 2024-01-17 (Wed @ 21:46)</sup> 
 
 <sup>***Days Left is only accurate if the `Last Updated` date is the same as todays date. Otherwise, use the due date!***</sup> 

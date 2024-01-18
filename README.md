@@ -1,7 +1,9 @@
 # 4443 - 5373 - Mobile Apps
 
 ### Roster
-<a href="https://docs.google.com/spreadsheets/d/1Ho6uAP-2KbAX4f_sv9KdA5Eszz7feF5p0I5YRFrXcfQ/edit?usp=sharing"><a href="https://imgbox.com/I0dU5rrM" target="_blank"><img src="https://images2.imgbox.com/38/ed/t8796trL_o.png" alt="image host" width="20"/></a> Class Roster</a> 
+<a href="https://docs.google.com/spreadsheets/d/1Ho6uAP-2KbAX4f_sv9KdA5Eszz7feF5p0I5YRFrXcfQ/edit?usp=sharing"><a href="https://imgbox.com/I0dU5rrM" target="_blank"><img src="https://images2.imgbox.com/38/ed/t8796trL_o.png" alt="image host" width="20"/></a> 4443 - Class Roster</a> 
+
+<a href="https://docs.google.com/spreadsheets/d/1zWZb8OeQ5sQt3oHz_x_Cvm-HS9WrMOl2jKY8DjignGA/edit?usp=sharing"><a href="https://imgbox.com/I0dU5rrM" target="_blank"><img src="https://images2.imgbox.com/38/ed/t8796trL_o.png" alt="image host" width="20"/></a> 5373 - Class Roster</a> 
 
 ### General Course Info
 - __Days:__ TR 11:00 a.m. - 12:20 p.m. 
