@@ -20,72 +20,124 @@
 
 ## Office Hours
 
-<a href="https://imgbox.com/9i30YeA1" target="_blank"><img src="https://thumbs2.imgbox.com/18/75/9i30YeA1_t.png" alt="image host"/></a>
+<a href="https://images2.imgbox.com/fe/95/NM7MD8WY_o.png" target="_blank"><img src="https://images2.imgbox.com/fe/95/NM7MD8WY_o.png" alt="image host" width="400"/></a>
 
 
-## React Native Course Topics List
+<!-- ## General Topics List
 
-- [ ] Introduction to React Native
-- [ ] Setting up the Development Environment
-- [ ] JavaScript and ES6+ Refresher
-- [ ] Basic React Native Components
-- [ ] Flexbox and Layout in React Native
-- [ ] Styling and Responsive Design
-- [ ] State and Props in React Components
-- [ ] Handling User Input and Forms
-- [x] Navigation in React Native (Stack, Tab, Drawer)
-- [x] Fetching and Displaying Data from APIs
-- [ ] Local Storage and Data Persistence
-- [ ] Animations and Gestures
-- [ ] Testing with Jest and Debugging Techniques
-- [ ] Building and Deploying for iOS and Android
-- [ ] Performance Optimization in React Native
-- [ ] React Native Best Practices
-- [ ] Advanced Topics in React Native (e.g., Context API, Redux)
-- [ ] Capstone Project
+All mobile apps would require a list of topics that are common
 
-## 15-Week React Native Course Schedule
+### Week 1. **Introduction to Mobile App Development**
+   - Overview of Mobile App Ecosystems (iOS, Android, Cross-Platform)
+   - Understanding Mobile User Interface and User Experience
+   - Mobile App Development: Native vs Cross-Platform vs Hybrid
 
-- Week 1:
-  - [ ] Introduction to React Native                      
-  - [ ] Setting up the Development Environment     
-  - [ ] JavaScript and HTML Refresher or Introduction    
- - Week 2         
-   - [ ] Basic React Native Components                     
-   - [ ] Flexbox and Layout in React Native                
- - Week 4     
-   - [ ] Styling and Responsive Design                     
- - Week 5     
-   - [ ] State and Props in React Components               
- - Week 6     
-   - [ ] Handling User Input and Forms                     
- - Week 7     
-   - [ ] Navigation in React Native (Stack, Tab, Drawer)   
- - Week 8     
-   - [ ] Midterm Project (Applying Concepts Learned)       
- - Week 9     
-   - [ ] Fetching and Displaying Data from APIs            
- - Week 10    
-   - [ ] Local Storage and Data Persistence                
- - Week 11    
-   - [ ] Animations and Gestures                           
- - Week 12    
-   - [ ] Testing with Jest and Debugging Techniques        
- - Week 13    
-   - [ ] Building and Deploying for iOS and Android        
- - Week 14    
-   - [ ] Performance Optimization in React Native          
-   - [ ] React Native Best Practices                       
- - Week 15    
-   - [ ] Capstone Project Presentations and Course Wrap-Up 
+### Week 2. **Fundamentals of Mobile Programming**
+   - Basic Programming Concepts (variables, control structures, functions, etc.)
+   - Object-Oriented Programming Principles
+   - Understanding APIs and Web Services
+   - Introduction to Mobile App Design Patterns (MVC, MVVM, etc.)
+
+### Week 3. **User Interface Design and Development**
+   - Principles of Mobile UI/UX Design
+   - Designing for Different Screen Sizes and Resolutions
+   - Touch Interfaces and Gestures
+   - Accessibility and Internationalization
+
+### Week 4. **Mobile App Architecture**
+   - Understanding Client-Server Architecture in Mobile Apps
+   - Data Storage and Persistence (Local storage, Databases)
+   - State Management in Mobile Apps
+
+### 5. **Networking and Integration**
+   - RESTful APIs and JSON
+   - Handling Network Requests and Responses
+   - Integrating Third-party Services (Social Media, Payment Gateways, etc.)
+
+### 6. **Data and State Management**
+   - Introduction to Local and Remote Databases
+   - Managing App State and User Sessions
+   - Data Synchronization and Offline Access
+
+### 7. **Security in Mobile Apps**
+   - Basic Security Best Practices
+   - Secure Data Transmission
+   - Authentication and Authorization
+
+### 8. **Testing and Debugging**
+   - Unit Testing and UI Testing
+   - Debugging Techniques
+   - Performance Optimization
+
+### 9. **Deployment and Distribution**
+   - Understanding App Stores (Apple App Store, Google Play Store)
+   - App Submission Process and Guidelines
+   - App Versioning and Updates
+
+### 10. **Emerging Trends and Technologies**
+   - Overview of AR/VR in Mobile Apps
+   - Understanding Machine Learning and AI in Mobile
+   - IoT and Mobile Apps
+
+### 11. **Project Work**
+   - Ideation and Conceptualization of a Mobile App
+   - Design, Development, and Testing of a Prototype
+   - Presentation and Peer Review
+
+### 12. **Industry Insights and Best Practices**
+   - Case Studies of Successful Mobile Apps
+   - Guest Lectures from Industry Professionals
+   - Overview of Current Market Trends and Future Outlook -->
+
+## Course Topics List
+
+### Week 1-3: Foundations and Basic App Development
+- **Week 1**: Introduction to Mobile App Ecosystems; Basic Programming Concepts.
+- **Week 2**: Principles of Mobile UI/UX; Simple UI Design and Navigation.
+- **Week 3**: Basic App Functionality; Simple Data Display (e.g., Text, Images).
+
+### Week 4-6: Intermediate Development and First Project
+- **Week 4**: API Interaction; Displaying Data from APIs.
+- **Week 5**: Introduction to Location-Based Services and Maps.
+- **Week 6**: Accessing and Using the Camera.
+
+   _Project 1: A Basic App incorporating API, Location, and Camera (e.g., a Local Event Finder App)_
+
+### Week 7-9: Advanced Features and Data Handling
+- **Week 7**: Advanced UI Components; Custom Views and Animations.
+- **Week 8**: Data Storage and Persistence; Local Databases.
+- **Week 9**: State Management; Handling App Lifecycle.
+
+### Week 10-12: Networking, Integration, and Second Project
+- **Week 10**: Advanced Networking; Handling Complex API Interactions.
+- **Week 11**: Third-Party Service Integration (e.g., Payment Gateways).
+- **Week 12**: Offline Access; Robust Networking Practices.
+
+   _Project 2: An Advanced App with Rich Features (e.g., A Social Media App with Post and Photo Sharing)_
+
+### Week 13-15: Deployment and Final Project
+- **Week 13**: Basic Security Best Practices; Introduction to Testing.
+- **Week 14**: App Optimization; Preparing for Deployment.
+- **Week 15**: Course Recap; Final Project Presentations and Peer Review.
+
+   _Project 3 (Optional): Student-Defined Project using all learned concepts_
+
+### Key Integrations:
+- **Location-Based Services and Maps**: These are introduced in Week 5. Students learn to integrate GPS and maps into their apps, enhancing user experience by providing contextual content based on their location.
+- **Camera Functionality**: Covered in Week 6, where students learn to access and use the device's camera, a crucial skill for modern app development. This includes capturing, storing, and displaying images within the app.
+
+### Additional Considerations:
+- **Project-Based Learning**: Each major project builds upon the skills learned, with increasing complexity. The first project focuses on basic features, the second introduces advanced functionality, and the optional third project encourages students to explore creative ideas.
+- **Light Coverage on Security and Testing**: While these are critical in app development, they are covered lightly given the time constraints. However, instill best practices throughout the course.
+- **Practical and Interactive**: The course is designed to be hands-on, with a strong emphasis on practical skills and real-world application.
 
 
 ## Grading
 
-Grading as of the recent past has become a fluid endeavor. Projects (programs) do not have the same integrity that they once did in assessing a students knowledge. Exams, like always, evaluate a students ability to memorize, cram information, or cheat I dare say, all without really understanding the topics. So I'm going for a more hands on / oral examination approach with projects and code reviews. The grade scale below is not complete, but will change as our class moves forward. I will use a democratic approach to determining a final grading scale ensuring the majority of the class agrees with the weights for each category. I will reserve the right to veto ridiculous organized labor's ideas (aka class getting together and all agreeing on something ridiculous), but will in good faith try to listen to the class within reason. You can assume that every category will have a minimum of 10% with two exceptions:
+Grading within the recent past has become a fluid / difficult endeavor. Projects (programs) do not have the same integrity that they once did in assessing a students knowledge. Exams, like always, evaluate a students ability to memorize, cram information, or cheat I dare say, all without really understanding the topics. ***So I will be going for a more hands on approach by using oral examinations in conjunction with code reviews.*** This means I will sit down with everyone at least once, on a project of my choosing to discuss with them the code they submitted for grading. This way, whether its a group project or individual project, I can assess a general understanding from each student for that project. I wish I had time to do this for every assignment, but it wouldn't be feasible from a time approach. 
 
-1. Exams: we may not have any
-2. Participation: it may be as low as 5%
+The grade scale below is not complete, but will change as our class moves forward. I will use a democratic approach to determining a final grading scale ensuring the majority of the class agrees with the weights for each category. I will reserve the right to veto ridiculous organized labor's ideas (aka class getting together and all agreeing on something ridiculous), but will in good faith try to listen to the class within reason. 
+
 
 | Categories    | Portion of Course | ::: | Letter Grade | Grade Range |
 | :------------ | :---------------: | --- | :----------: | :---------: |
@@ -96,7 +148,6 @@ Grading as of the recent past has become a fluid endeavor. Projects (programs) d
 | Participation |        TBD        | ::: |      F       |  below 60   |
 | Presentation  |        TBD        | ::: |              |             |
 | Code Review   |        TBD        | ::: |              |             |
-
 
 
 - **Exams**:
@@ -126,10 +177,16 @@ Grading as of the recent past has become a fluid endeavor. Projects (programs) d
     - What was the funnest part of the project?
     - What was the most difficult part of the project?
   - Showing code specific portions of your code for the above items is a good way to help you walk your viewers through each of the points mentioned above.
+  - 
 - **Code Review**:
+  - As mentioned above: 
   - I will choose a random project and have individuals describe in detail chunks of code chosen by me. 
   - This may be in front of class, or simply with only me. 
   - My goal is to find out what you actually know about your project code. 
+
+## Graduate vs Undergraduate
+
+This is a dual listed course in which I will keep the content for both graduate and undergraduate very similar. However, the graduate version will contain extra presentation time along with an emphasis on presenting or teaching contemporary advance topics especially in the areas of: `Emerging Trends and Technologies` along with `Industry Insights and Best Practices`.
 
 ---
 
@@ -206,7 +263,7 @@ Some of these points are duplicated in other places in this document. It's ok.
 
 ### Attendance Policy 
 
-Although student attendance is not calculated into the grade, attendance will be taken each day to track students. If a student is absent more than 2 classes without an excuse and is not performing well in class, a report can be submitted to the Dean of Students and the student may be dropped from the class.  Classes will not be streamed for absent students, whether it is excused or not.
+I don't have an attendance policy. However, I do track students attendance and will submit a drop request to the dean of students for students that have excessive absences. I won't define "excessive" but will give you a warning before I submit the actual drop request. To alleviate issues, simply communicate with me about any issues or problems you are having with getting to class, and I will help in any way that I can. 
 
 ### Behavior in the classroom 
 
@@ -220,9 +277,9 @@ Students are to assist in maintaining a classroom environment that is conducive 
 
 ### Late Work 
 
-Late programs will be accepted with an initial **15 point** reduction and then a **5 point **deduction class day. ***No late programs for last programming assignment. No late homework will be allowed in the Connect System.*** 
+Late programs / homeworks will be accepted with an initial **15 point** reduction and then a **5 point **deduction class day. ***No late programs for last programming assignment.*** 
 
-**Computer Requirements:**  Taking this class requires you to have access to a computer (with Internet access) to access online course material. ***Personal computer technical difficulties will not be considered a reason for extra time to submit assignments, tests, or online discussion postings.*** Computers are available on campus in various areas of the buildings, as well as the in the library. Contact your instructor immediately upon having computer trouble. If you have technical difficulties in the course, there is also a student helpdesk available to you. The university cannot work directly on student computers due to both liability and resource limitations, however they are able to help you get connected to our online services. For help, log into[` `**D2L.](https://d2l.msutexas.edu/)** 
+**Computer Requirements:**  Taking this class requires you to have access to a computer (with Internet access) to access online course material. ***Personal computer technical difficulties will not be considered a reason for extra time to submit assignments, tests, or online discussion postings.*** Computers are available on campus in various areas of the buildings, as well as the in the library. Contact your instructor immediately upon having computer trouble. If you have technical difficulties in the course, there is also a student helpdesk available to you. The university cannot work directly on student computers due to both liability and resource limitations, however they are able to help you get connected to our online services. For help, log into **[`D2L`](https://d2l.msutexas.edu/)** 
 
 ### Policy on Testing Process 
 
@@ -271,26 +328,3 @@ Senate Bill 11 passed by the 84th Texas Legislature allows licensed handgun hold
 ### Midterm Progress Report 
 
 In order to help students keep track of their progress toward course objectives, the instructor for this class will provide a Midterm Progress Report for all students in the course through each student’s MSU Portal account. Midterm grades will not be reported on the students’ transcript; nor will they be calculated in the cumulative GPA. They simply give students an idea of where they stand at the midpoint of the semester.  Students earning below a C at the midway point should a) schedule a meeting with the professor and b) Seek out tutoring. 
-
-
-### Important Dates 
-
-Visit[ MSU’s Registrars ](https://msutexas.edu/registrar/_assets/files/pdfs/fall23front.pdf.)website[ Important Dates ](https://msutexas.edu/registrar/_assets/files/pdfs/fall19front.pdf) https://msutexas.edu/registrar/\_assets/files/pdfs/fall23front.pdf 
-
-
-# End syllabus
-
-## Q1
-I would like to tweak my previous query about react native. I will be teaching an undergraduate course in which I cannot assume knowledge of html or javascript. I don't want to spend a lot of time on those two topics, but I feel it would be necessary. I could also continue to add in javascript throughout the 15 week semester to address current topics we are covering. 
-
-
-I asked you previously about a curriculum for teaching a course in React Native to undergrad students. I'm going to ask again but with some specific requests if thats ok. The following list will provide the additional details I would like to incorporate:
-
-- Course length 15 weeks
-- Main topic is React Native
-- Students are not expected to know html or javascript, so those will have to be covered as quickly as possible.
-- Most students do not understand the client server model. I will let them develop via local host initially, but by the end of the semester, I would like all of them to obtain a cheap server through a service like Digital Ocean (Github Developer pack provides free server time to students via Digital Ocean) to host their apps. 
-- Initial assignments obviously should be very easy and not incorporate api's or databases. 
-- I would like to introduce sqlite as well as local storage to the class. 
-- One project will have to include a backend api using mongodb as a database. This can be introduced as early as your knowledge base would recommend. I'm not sure if I should use Python Fast-API or stick with something more javascript like NodeJs to run server side. 
-- Css is important, but I want to use as many stock or pre-created styles as possible. 
