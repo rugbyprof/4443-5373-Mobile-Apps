@@ -26,6 +26,8 @@ You can ask questions multiple ways on Slack. Either on our public class channel
 
 You should have gotten an invite already from me. Accept it. If you didn't, ask me for another invite. [Here](https://get.slack.help/hc/en-us/articles/218080037-Getting-started-for-new-users) is a getting started guide to help you use slack. Slack is an app. It can be installed OR viewed via a web browser using a URL.
 
+Add yourself to the `#4443-5373-mob` channel.
+
 #### Slack provides
 
 - Team chat (class members and myself).
