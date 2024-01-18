@@ -15,8 +15,8 @@
   - __Easter__ Monday March 27<sup>th</sup> - Friday March 29<sup>th</sup>
 - [__Last Day for “W”:__](http://tinyurl.com/msucal2324)  Monday March 25<sup>th</sup>
 - [__Last Day of Class:__](http://tinyurl.com/msucal2324) Friday May 3<sup>rd</sup>
-- [__Final Exam:__]**4443**: (http://tinyurl.com/msufinals24) Tuesday, May 7<sup>th</sup> @ 1:00pm – 3:00pm (same room)
-- [__Final Exam:__]**5373**: (http://tinyurl.com/msufinals24) Tuesday, May 7<sup>th</sup> @ 5:45pm – 7:45pm (same room)
+- [__4443 Final Exam:__](http://tinyurl.com/msufinals24) Tuesday, May 7<sup>th</sup> @ 1:00pm – 3:00pm (same room)
+- [__5373 Final Exam:__](http://tinyurl.com/msufinals24) Tuesday, May 7<sup>th</sup> @ 5:45pm – 7:45pm (same room)
 
 ## Office Hours
 
