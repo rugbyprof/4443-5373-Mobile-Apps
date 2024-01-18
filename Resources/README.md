@@ -1,9 +1,12 @@
 ## Resources
 
-| Folder | Title | Description | Due | Filename |
-|-----|-----|-----|-----|-----|
-| None | None | None | None | None |
+| Folder | Title | Description | Due Date | Due |  |
+|:------|:------|:------|:-----:|:-----:|-----|
+| ***<a href="https://github.com/rugbyprof/4443-5373-Mobile-Apps/tree/master/Resources/01-Readmees">01-Readmees</a>*** | ***<a href="https://github.com/rugbyprof/4443-5373-Mobile-Apps/tree/master/Resources/01-Readmees"> README </a>*** | ***<a href="https://github.com/rugbyprof/4443-5373-Mobile-Apps/tree/master/Resources/01-Readmees"> How You Should Format Them</a>*** | ***<a href="https://github.com/rugbyprof/4443-5373-Mobile-Apps/tree/master/Resources/01-Readmees">None</a>*** | ***<a href="https://github.com/rugbyprof/4443-5373-Mobile-Apps/tree/master/Resources/01-Readmees"> None</a>*** |  |
+| ***<a href="https://github.com/rugbyprof/4443-5373-Mobile-Apps/tree/master/Resources/02-Linux_Commands">02-Linux_Commands</a>*** | ***<a href="https://github.com/rugbyprof/4443-5373-Mobile-Apps/tree/master/Resources/02-Linux_Commands"> Linux Commands </a>*** | ***<a href="https://github.com/rugbyprof/4443-5373-Mobile-Apps/tree/master/Resources/02-Linux_Commands"> Basic command info</a>*** | ***<a href="https://github.com/rugbyprof/4443-5373-Mobile-Apps/tree/master/Resources/02-Linux_Commands">None</a>*** | ***<a href="https://github.com/rugbyprof/4443-5373-Mobile-Apps/tree/master/Resources/02-Linux_Commands"> None</a>*** |  |
+| ***<a href="https://github.com/rugbyprof/4443-5373-Mobile-Apps/tree/master/Resources/03-Python_Intro">03-Python_Intro</a>*** | ***<a href="https://github.com/rugbyprof/4443-5373-Mobile-Apps/tree/master/Resources/03-Python_Intro">None</a>*** | ***<a href="https://github.com/rugbyprof/4443-5373-Mobile-Apps/tree/master/Resources/03-Python_Intro">None</a>*** | ***<a href="https://github.com/rugbyprof/4443-5373-Mobile-Apps/tree/master/Resources/03-Python_Intro">None</a>*** | ***<a href="https://github.com/rugbyprof/4443-5373-Mobile-Apps/tree/master/Resources/03-Python_Intro">| #   | File                                                 | Description |</a>*** |  |
+| ***<a href="https://github.com/rugbyprof/4443-5373-Mobile-Apps/tree/master/Resources/04-Presentations">04-Presentations</a>*** | ***<a href="https://github.com/rugbyprof/4443-5373-Mobile-Apps/tree/master/Resources/04-Presentations">None</a>*** | ***<a href="https://github.com/rugbyprof/4443-5373-Mobile-Apps/tree/master/Resources/04-Presentations">None</a>*** | ***<a href="https://github.com/rugbyprof/4443-5373-Mobile-Apps/tree/master/Resources/04-Presentations">None</a>*** | ***<a href="https://github.com/rugbyprof/4443-5373-Mobile-Apps/tree/master/Resources/04-Presentations">N/A</a>*** |  |
 
-<sup>Last Updated: 2024-01-17 (Wed @ 21:55)</sup> 
+<sup>Last Updated: 2024-01-18 (Thu @ 02:11)</sup> 
 
 <sup>***Days Left is only accurate if the `Last Updated` date is the same as todays date. Otherwise, use the due date!***</sup> 
