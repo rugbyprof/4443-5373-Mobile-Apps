@@ -1,6 +1,5 @@
 ## What is a "Backend"
 
-You need to 
 This overview will give you insight into creating an API using both `Express` (javascript) and `Fast API` (python). 
 
 ### Express Backend (Node.js)
@@ -72,4 +71,3 @@ This overview will give you insight into creating an API using both `Express` (j
 
 Both of these servers will respond to a GET request at the specified endpoint with the example JSON data. The Express server runs on port 3000, and the FastAPI server runs on port 8000. You can test these APIs using tools like Postman, or simply use a web browser. 
 
-Let me know if you need more details or a specific aspect of these setups!
