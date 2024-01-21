@@ -4,6 +4,6 @@
 |:------|:------|:------|:-----:|:-----:|-----|
 | ***<a href="https://github.com/rugbyprof/4443-5373-Mobile-Apps/tree/master/Lectures/L01">L01</a>*** | ***<a href="https://github.com/rugbyprof/4443-5373-Mobile-Apps/tree/master/Lectures/L01"> Placeholder Readme </a>*** | ***<a href="https://github.com/rugbyprof/4443-5373-Mobile-Apps/tree/master/Lectures/L01"> No Description</a>*** | ***<a href="https://github.com/rugbyprof/4443-5373-Mobile-Apps/tree/master/Lectures/L01">None</a>*** | ***<a href="https://github.com/rugbyprof/4443-5373-Mobile-Apps/tree/master/Lectures/L01">N/A</a>*** |  |
 
-<sup>Last Updated: 2024-01-19 (Fri @ 00:28)</sup> 
+<sup>Last Updated: 2024-01-21 (Sun @ 16:25)</sup> 
 
 <sup>***Days Left is only accurate if the `Last Updated` date is the same as todays date. Otherwise, use the due date!***</sup> 
