@@ -130,16 +130,32 @@ async def docs_redirect():
 
 
 @app.get("/people")
-def people():
+def people(id: int = -1):
     """
-    ## People!!
+    Retrieve a list of all the people
+    """
 
-    - one
-    - two
-    - three
+    if id < 0:
+        shuffle(data)
+        return data
+    else:
+        return data[id - 1]
+
+
+@app.get("/people2/{id}")
+def people2(id: int = -1):
     """
-    global data
-    return data
+    Retrieve a list of all the people
+    """
+
+    print(id)
+
+    id = int(id)
+
+    if id < 0:
+        return data
+    else:
+        return data[id - 1]
 
 
 @app.get("/candies")
