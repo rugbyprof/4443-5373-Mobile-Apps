@@ -1,7 +1,7 @@
 ### Assignment 3 - Create your own server.
 #### Due: 01-31-2024 (Wed @ 11 or 4)
 
-
+Command History From Class [HERE](./history.md)
 
 -----
 
