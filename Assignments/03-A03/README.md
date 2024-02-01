@@ -1,7 +1,11 @@
-### Assignment 3 - Create your own server.
-#### Due: 01-31-2024 (Wed @ 11 or 4)
+## Assignment 3 - Create your own server.
+#### Due: 02-04-2024 (Sun @ 11:59)
 
-Command History From Class [HERE](./history.md)
+I know the class is **TTh**, but I want it done by end of weekend.
+
+#### Command History
+
+- Command History From Class [HERE](./history.md)
 
 -----
 
@@ -75,11 +79,26 @@ I placed a walkthrough and explanation in this folder in the first link below, h
 
 #### 7. Me Accessing Your Server
 
-Add my public key to: `authorized_users` in the `/root/.ssh` folder.
+- Add my public key to: `authorized_keys` in the `/root/.ssh` folder.
 
 ```
 ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAINnp5TGdQdQ+p4j6MAa2S2xWeoQCFmLd9H10S/UPBYed terry.griffin@msutexas.edu
 ```
+
+- Here's the commands you need to run after copying the above key onto your clipboard.
+```bash
+ssh root@your.ip.address
+cd .ssh 
+nano authorized_keys
+# at this point the file is open in nano and you simple paste my key on the first blank line.
+# use ctrl-x to exit
+#    hit y when it asks yes / no
+#    hit enter to keep same filename
+```
+
+- Finally add your ip address to our class roster (far right column);
+- https://docs.google.com/spreadsheets/d/1Ho6uAP-2KbAX4f_sv9KdA5Eszz7feF5p0I5YRFrXcfQ/edit?usp=sharing
+- Just the ip address (e.g. 123.45.67.89 NOT http://123.45.67.89) 
 
 -----
 

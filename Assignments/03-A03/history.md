@@ -4,6 +4,7 @@ Chat GPT created this markdown table.
 
 | Command                           | Description                                                                                   |
 | --------------------------------- | --------------------------------------------------------------------------------------------- |
+| `ssh root@your.ip.address`        | Logs you into your server.                                                                    |
 | `apt install apache2`             | Installs the Apache2 web server on Ubuntu.                                                    |
 | `apt install python3-pip`         | Installs pip for Python 3, the Python package installer.                                      |
 | `apt install python3.11-venv`     | Installs the Python 3.11 virtual environment package on Ubuntu.                               |
