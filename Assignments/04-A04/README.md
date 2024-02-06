@@ -5,7 +5,7 @@
 
 |   #   | Name                                               | Description                                         |
 | :---: | :------------------------------------------------- | :-------------------------------------------------- |
-|   0   | [candyAPI](./candyAPI/README.mdcandyAPI)           | Folder with all the starter code.                   |
+|   0   | [candyAPI](./candyAPI/README.md)                   | Folder with all the starter code.                   |
 |   1   | [apiRouteHelp.md](./apiRouteHelp.md)               | Example route syntax plus other stuff               |
 |   2   | [mongoDbsCollections.md](./mongoDbsCollections.md) | Talk about Mongo Dbs and Collections + more.        |
 |   3   | [pymongoHelp.md](./pymongoHelp.md)                 | Pymongo snippets on various topics.                 |

@@ -7,6 +7,6 @@
 | ~<a href="https://github.com/rugbyprof/4443-5373-Mobile-Apps/tree/master/Assignments/01-A02">01-A02</a>~ | ~<a href="https://github.com/rugbyprof/4443-5373-Mobile-Apps/tree/master/Assignments/01-A02"> Assignment 2 </a>~ | ~<a href="https://github.com/rugbyprof/4443-5373-Mobile-Apps/tree/master/Assignments/01-A02"> Establishing Comms</a>~ | ~<a href="https://github.com/rugbyprof/4443-5373-Mobile-Apps/tree/master/Assignments/01-A02">Jan 23rd</a>~ | ~<a href="https://github.com/rugbyprof/4443-5373-Mobile-Apps/tree/master/Assignments/01-A02">Tue @ 11 or 4</a>~ | ---- |
 | ~<a href="https://github.com/rugbyprof/4443-5373-Mobile-Apps/tree/master/Assignments/03-A03">03-A03</a>~ | ~<a href="https://github.com/rugbyprof/4443-5373-Mobile-Apps/tree/master/Assignments/03-A03"> Assignment 3 </a>~ | ~<a href="https://github.com/rugbyprof/4443-5373-Mobile-Apps/tree/master/Assignments/03-A03"> Create your own server.</a>~ | ~<a href="https://github.com/rugbyprof/4443-5373-Mobile-Apps/tree/master/Assignments/03-A03">Feb 4th</a>~ | ~<a href="https://github.com/rugbyprof/4443-5373-Mobile-Apps/tree/master/Assignments/03-A03">Sun @ 11:59</a>~ | ---- |
 
-<sup>Last Updated: 2024-02-06 (Tue @ 09:59)</sup> 
+<sup>Last Updated: 2024-02-06 (Tue @ 10:00)</sup> 
 
 <sup>***Days Left is only accurate if the `Last Updated` date is the same as todays date. Otherwise, use the due date!***</sup> 
