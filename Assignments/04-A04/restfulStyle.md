@@ -1,4 +1,8 @@
-Hey Terry, switching gears to FastAPI and RESTful design principles sounds like a fun pivot! You're right in noting that RESTful APIs focus on providing a consistent and stateless interface for interacting with resources, often emphasizing readability and a predictable structure. The choice between using path parameters (like `/product/1/`) and query parameters (like `/product?id=1`) can depend on several factors, including resource hierarchy, operation semantics, and personal or organizational style preferences.
+## API Styles
+
+I asked Chat GPT a question that was bothering me, and it gave me an answer that actually convinced me that I might be wrong in my approach to parameter passing using the `query params` style (e.g. ?id=73734&color=red). So read Gpt's answer below:
+
+You're right in noting that RESTful APIs focus on providing a consistent and stateless interface for interacting with resources, often emphasizing readability and a predictable structure. The choice between using path parameters (like `/product/1/`) and query parameters (like `/product?id=1`) can depend on several factors, including resource hierarchy, operation semantics, and personal or organizational style preferences.
 
 ### RESTful Principles and URL Design
 

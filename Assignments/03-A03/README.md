@@ -115,6 +115,31 @@ $ sudo apt-get upgrade -y
 
 ```
 
+#### 9. Python
+
+- Install Python3 (if not already installed)
+
+- Check if Python 3 is installed by typing `python3 --version` in your terminal. If it's installed, you should see the Python version number. If not, install Python 3 by running:
+
+```bash
+sudo apt install python3
+```
+
+
+#### 9. Run the Api
+
+Make sure you can run the basic api that we made in class together. Files and instructions are [here](./api_files/README.md)
+
+
+## Checklist
+
+1. Create a cloud based server preferably through digital ocean.
+2. Update and upgrade all packages after login. I shouldn't see any security updates needed when I log in.
+3. Enable the `UFW` firewall with the following ports open: 22, 80, 8080
+4. Upload the api_files folder and ensure you can run python and the basic code that I provided. Instructions on uploading, ensuring python is setup, and running the api is all included here: [api_files](./README.md). 
+5. Add my ssh key so I can login to your server.
+6. Add your IP address to the course roster. Make sure it does not contain anything but the ip address itself. If you have a domain name, add that to the column to the right.
+
 [1]:  ../../Resources/01-icons/icons8-folder-24.png
 [2]: ../../Resources/01-icons/DigitalOcean_logo.png
 [9]:  ../../Resources/01-icons/icons8-markdown-24.png
