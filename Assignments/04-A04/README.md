@@ -20,7 +20,7 @@
 
 ## Overview
 
-Code you will need the following Python scripts:
+You can use the following Python scripts or write your own, just fulfill the requirements.
 
 - [api.py](./candyAPI/api.py) 
 - [mongoDBInterface.py](./candyAPI/mongoDBInterface.py)
@@ -39,4 +39,9 @@ Ultimately the goal is to have your api located at: http://your.ip.address:8080 
 ## Specifics
 
 
+
+## Requirements
+
+
+## Deliverables
 
