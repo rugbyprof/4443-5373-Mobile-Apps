@@ -139,6 +139,8 @@ Make sure you can run the basic api that we made in class together. Files and in
 4. Upload the api_files folder and ensure you can run python and the basic code that I provided. Instructions on uploading, ensuring python is setup, and running the api is all included here: [api_files](./README.md). 
 5. Add my ssh key so I can login to your server.
 6. Add your IP address to the course roster. Make sure it does not contain anything but the ip address itself. If you have a domain name, add that to the column to the right.
+7. Place the API code in a folder called `A03` in your root folder.
+8. I will start the API when I log in to make sure it runs. 
 
 [1]:  ../../Resources/01-icons/icons8-folder-24.png
 [2]: ../../Resources/01-icons/DigitalOcean_logo.png

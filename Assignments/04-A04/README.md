@@ -1,47 +1,106 @@
 ## Assignment 4 - Mongo DB
-#### Due: 02-13-2024 (Tue @ 11 or 4)
+#### Due: 02-20-2024 (Tue @ 11 or 4)
 
 ## Files
 
-|   #   | Name                                               | Description                                         |
-| :---: | :------------------------------------------------- | :-------------------------------------------------- |
-|   0   | [candyAPI](./candyAPI/README.md)                   | Folder with all the starter code.                   |
-|   1   | [apiRouteHelp.md](./apiRouteHelp.md)               | Example route syntax plus other stuff               |
-|   2   | [mongoDbsCollections.md](./mongoDbsCollections.md) | Talk about Mongo Dbs and Collections + more.        |
-|   3   | [pymongoHelp.md](./pymongoHelp.md)                 | Pymongo snippets on various topics.                 |
-|   4   | [registerApi.md](./registerApi.md)                 | Register your api with the server to keep it alive. |
-|   5   | [restfulStyle.md](./restfulStyle.md)               | What is RESTful all about?                          |
-|   6   | [securingMongo.md](./securingMongo.md)             | Secure mongo by adding users and require passwords. |
+|   #   | Name                   | Description                                    |
+| :---: | :--------------------- | :--------------------------------------------- |
+|   1   | [candyAPI](candyAPI)   | Necessary code to load and run your api.       |
+|   2   | [topicHelp](topicHelp) | Different files to help with different topics. |
 
 
 
+## Basic Overview
+
+You are going to:
+1. Populate MongoDB:
+   - Upload the code to populate the mongo db on your own server. Code is [HERE](./candyAPI/).
+2. Create New Routes: 
+   - Get a copy of the mongoDb interface class to help you with managing mongoDB via Fastapi and PyMongo. Code is [HERE](./candyAPI/mongoDBInterface.py) and edit the routes in [api.py](./candyAPI/api.py) to be tailored to our candy database.
+3. Register API:
+   - Register your api with your server so that it will always be up and running.  
+
+### Populate MongoDB
+
+***Upload relevant files to your own server.***
+
+There are three ways to make this happen.
+
+#### 1.Drag N Drop
+
+If you have the files downloaded, you can simple drag and drop them to your vscode instance that is connected to your server.
+
+#### 2. Git Clone
+
+1. Connect to your server via terminal. 
+2. Run `git clone https://github.com/rugbyprof/4443-5373-Mobile-Apps.git`
+3. Change to the directory where you want your code to go.
+4. Then copy the appropriate folder using a command like: 
+   
+```bash
+cp -r 4443-5373-Mobile-Apps/Assignments/04-A04/candyAPI .
+# This command means "copy recursively the folder canyAPI to `here` (wherever you currently are)"
+```
+<sup>1.The -r means recursive. This is necessary with folders.
+<sup>2. Notice the `.` after the path, that means "here". 
+
+#### 3. Rsync
+
+Also if you already have them downloaded, you can use rsync to upload them. Here's a basic example of how to use `rsync` to upload a folder from your local machine to a remote server:
+
+```sh
+rsync -avz /path/to/local/folder/ username@remote_host:/path/to/remote/folder/
+```
+
+Explanation of the options:
+
+- `-a`: This stands for "archive mode," which ensures that symbolic links, devices, attributes, permissions, ownerships, etc., are preserved in the transfer.
+- `-v`: This enables verbose mode, which provides detailed information about the file transfer process.
+- `-z`: This option enables compression during the transfer, which can speed up the transfer of large files over the network. It doesn't compress the files on the disk; it only compresses the data during the transfer.
+
+```sh
+rsync -avz /path/to/local/folder/ username@remote_host:/path/to/remote/folder/
+```
+><sup>**Note the trailing slashes (`/`) after the folder paths. In `rsync`, including a trailing slash on the source directory means "copy the contents of this directory," as opposed to "copy the directory by name."**</sup>
+
+### Create New Routes
+
+***Load Mongo DB***
+
+1. Now that you have the files copied onto your server, you can run `loadMongo.py` to create your "candy_store" db and the "candies" collection.  
+2. Make sure you are in the `candyAPI` folder. Then run:
+
+```bash
+python3 loadMongo.py
+```
+><sup>Or however you run python on your server</sup>
+
+***Updating Routes***
+
+We need routes that will do basic querying of our mongo `candy store`. Below is a list of necessary queries.
+
+1. Get all candies.
+2. Get a list of categories.
+3. Get candies in a specific category.
+4. Get candies with a key word in the description.
+5. Get candies with a key word in the name.
+6. Get candies by price range.
+7. Get candy with with a specified ID.
+8. Get a candy image.
+9. Update a candies price. 
+10. Update a candies { ....... }
+11. Delete a candy.
+
+### Register Api
+
+Use the help [HERE](./topicHelp/registerApi.md) to get your api registered with your server to keep it alive.
 
 
+### Requirements
 
-## Overview
+- Create a folder called `A04` in your Assignments folder AND on your server under the root folder.
+- Place your mongo classes and api code in that folder. 
+- This instance of the API should be up and running if I goto http://your.ip.address:8080
+- I should be able to run all of the specified routes from above.
 
-You can use the following Python scripts or write your own, just fulfill the requirements.
-
-- [api.py](./candyAPI/api.py) 
-- [mongoDBInterface.py](./candyAPI/mongoDBInterface.py)
-- [loadMongo.py](./candyAPI/loadMongo.py)
-
-And the folder [categoryJson](./candyAPI/categoryJson/) that contains all the category files with each categories category data.
-
-Using all of these files, we should now have what we need to:
-1. Create our Mongo DB `candy_store` and the collection `candies` 
-2. Load the `candies` collection (with [loadMongo.py](./candyAPI/loadMongo.py))
-3. Start completing all api routes given the file [api.py](./candyAPI/api.py) and all of its route stubs. Those aren't necessarily everything you need, there will definitely need to be some tweaking.
-4. Register your api with the server so it stays up and running. 
-
-Ultimately the goal is to have your api located at: http://your.ip.address:8080 always up and available without worrying that you need to restart it all the time. 
-
-## Specifics
-
-
-
-## Requirements
-
-
-## Deliverables
 

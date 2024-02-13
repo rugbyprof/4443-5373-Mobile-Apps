@@ -105,10 +105,6 @@ This is where methods you write to help with any routes written below should go.
 a module written that you include with statements above.  
 """
 
-data = []
-
-with open("people.json") as f:
-    data = json.load(f)
 
 """
   _____   ____  _    _ _______ ______  _____
@@ -127,35 +123,6 @@ with open("people.json") as f:
 async def docs_redirect():
     """Api's base route that displays the information created above in the ApiInfo section."""
     return RedirectResponse(url="/docs")
-
-
-@app.get("/people")
-def people(id: int = -1):
-    """
-    Retrieve a list of all the people
-    """
-
-    if id < 0:
-        shuffle(data)
-        return data
-    else:
-        return data[id - 1]
-
-
-@app.get("/people2/{id}")
-def people2(id: int = -1):
-    """
-    Retrieve a list of all the people
-    """
-
-    print(id)
-
-    id = int(id)
-
-    if id < 0:
-        return data
-    else:
-        return data[id - 1]
 
 
 @app.get("/candies")
