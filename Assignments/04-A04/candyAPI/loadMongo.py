@@ -13,38 +13,32 @@ import sys
 def load(**kwargs):
     json_files = glob.glob("./categoryJson/*.json")
 
-    # not used right now
     username = kwargs.get("username", None)
     password = kwargs.get("password", None)
     db = kwargs.get("db", None)
-
     collection1 = kwargs.get("collection1", None)
     collection2 = kwargs.get("collection2", None)
 
     print(collection1)
     print(collection2)
 
-    # No auth right now
     # db1 = MongoManager(username=username, password=password, db=db)
     # db2 = MongoManager(username=username, password=password, db=db)
 
-    db1 = MongoManager()
-    db2 = MongoManager()
+    db = MongoManager()
+    # db2 = MongoManager()
 
-    db1.setDb("candy_store")
-    db2.setDb("candy_store")
+    db.setDb("candy_store")
 
-    db1.dropCollection(collection1)
-    db2.dropCollection(collection2)
+    db.dropCollection("candies")
 
-    db1.setDb("candy_store")
-    db2.setDb("candy_store")
+    db.setCollection("categories")
 
-    db1.setCollection("candies")
-    db2.setCollection("categories")
+    db.dropCollection("categories")
 
     i = 0
     for file in json_files:
+
         print(file)
         parts = file.split("/")
         category = parts[-1][:-5].replace("-", " ").title()
@@ -58,14 +52,16 @@ def load(**kwargs):
 
             summary["count"] = len(data)
             summary["name"] = category
-            summary["id"] = i
+            summary["_id"] = i
 
             for id, item in data.items():
                 item["category"] = category
                 item["category_id"] = i
                 print(item)
-                db1.post(item)
-        db2.post(summary)
+                db.setCollection("candies")
+                db.post(item)
+        db.setCollection("categories")
+        db.post(summary)
         i += 1
 
 

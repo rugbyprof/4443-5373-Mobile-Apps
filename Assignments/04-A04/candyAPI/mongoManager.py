@@ -256,7 +256,7 @@ if __name__ == "__main__":
         # Get all categories sorted ascending by name
         mm.setCollection("categories")
 
-        categories = mm.get(sort_criteria=[("name", 1)])
+        categories = mm.get(sort_criteria=[("name", -1)], filter={"_id": 0, "count": 1})
 
         print(categories)
     elif query == "2":
@@ -265,17 +265,21 @@ if __name__ == "__main__":
 
         candies = mm.get(
             sort_criteria=[("category", 1), ("price", -1)],
-            filter={"_id": 0, "price": 1, "category": 1, "name": 1},
+            filter={"_id": 0, "price": 1, "category": 1},
         )
 
         print(candies)
     elif query == "3":
         mm.setCollection("candies")
         regex_query = {
-            "name": {"$regex": "sour", "$options": "i"}
+            "name": {"$regex": "crows", "$options": "i"}
         }  # '$options': 'i' makes it case-insensitive
 
-        sourCandies = mm.get2(query=regex_query)
+        sourCandies = mm.get(
+            query=regex_query,
+            # filter={"_id":0,"name":1},
+            sort_criteria=[("name", 1)],
+        )
         print(sourCandies)
         print(len(sourCandies["data"]))
 
@@ -294,18 +298,48 @@ if __name__ == "__main__":
         rangeQuery = mm.get(
             query=price_range_query,
             filter={"_id": 0, "price": 1, "category_id": 1, "name": 1},
+            sort_criteria={"price": -1},
         )
         print(rangeQuery)
         print(len(rangeQuery["data"]))
     elif query == "6":
         # original 49.99
         mm.setCollection("candies")
-        print(mm.put2("id", "42688432308411", "price", 39.99))
+        print(mm.get(query={"id": "42688432308411"}))
+    elif query == "7":
+        # original 49.99
+        mm.setCollection("candies")
+        print(mm.put2("id", "42688432308411", "price", 9.99))
 
-    else:
-        client = MongoClient()
-        db = client["candy_store"]
-        collection = db["candies"]
+    elif query == "8":
+        # client = MongoClient()
+        # db = client['candy_store']
+        # collection = db['candies']
 
-        results = collection.find({"category_id": 30})
-        print(list(results))
+        # results = collection.find({'category_id':30},{'_id':0,"name":1,'price':1})
+        # print(list(results))
+
+        mm.setCollection("candies")
+        for i in range(10):
+            result = mm.get(
+                sort_criteria=[("name", 1)],
+                skip=(i * 3),
+                limit=3,
+                filter={"_id": 0, "name": 1},
+            )
+            print(result)
+            print("=" * 30)
+    elif query == "9":
+        mm.setCollection("candies")
+        result = mm.get(sort_criteria=[("name", 1)], filter={"_id": 0, "name": 1})
+        print(result)
+    elif query == "10":
+        mm.setCollection("categories")
+        doc = {
+            "count": 23,
+            "name": "Dirt Candy",
+            "tast": "awesome",
+            "color": "pink",
+            "price": 99999.99,
+        }
+        mm.post(doc)

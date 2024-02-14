@@ -4,6 +4,10 @@ from fastapi.responses import RedirectResponse
 from fastapi.middleware.cors import CORSMiddleware
 import uvicorn
 import json
+from pymongo import MongoClient
+from typing import List
+from pydantic import BaseModel
+from mongoManager import MongoManager
 
 # Builtin libraries
 import os
@@ -92,6 +96,7 @@ maybe you create your own country file, which would be great. But try to impleme
 organizes your ability to access a countries polygon data.
 """
 
+mm = MongoManager(db="candy_store")
 
 """
   _      ____   _____          _        __  __ ______ _______ _    _  ____  _____   _____
@@ -130,27 +135,34 @@ def list_all_candies():
     """
     Retrieve a list of all candies available in the store.
     """
-    pass
+    mm.setCollection("candies")
+    result = mm.get(filter={"_id": 0})
+    return result
 
 
-@app.get("/candies/search")
-def search_candies(
-    query: str = Query(None, description="Query string to search candies")
-):
+@app.get("/candies/category/{category}")
+def candies_by_category(category: str):
     """
     Search for candies based on a query string (e.g., name, category, flavor).
     """
-    pass
+    mm.setCollection("candies")
+    result = mm.get(
+        query={"category": category},
+        filter={"_id": 0, "name": 1, "price": 1, "category": 1},
+    )
+    return result
 
 
-@app.get("/candies/{candy_id}")
-def get_candy_details(
-    candy_id: int = Path(..., description="The ID of the candy to retrieve")
-):
+@app.get("/candies/id/{id}")
+def get_candy_by_id(id: str):
     """
     Get detailed information about a specific candy.
     """
-    pass
+    mm.setCollection("candies")
+    result = mm.get(
+        query={"id": id}, filter={"_id": 0, "name": 1, "price": 1, "category": 1}
+    )
+    return result
 
 
 @app.post("/candies")
@@ -216,4 +228,11 @@ Note:
     The right side (app) is the bearingiable name of the FastApi instance declared at the top of the file.
 """
 if __name__ == "__main__":
-    uvicorn.run("api:app", host="127.0.0.1", port=8080, log_level="debug", reload=True)
+    uvicorn.run(
+        "api:app", host="kidsinvans.fun", port=8080, log_level="debug", reload=True
+    )
+"""                                   ^
+                                      |
+CHANGE DOMAIN NAME                    |              
+
+"""
