@@ -10,4 +10,5 @@
 |   6   | [registerApi.md](registerApi.md)                 | Register your api with the server to keep it alive. |
 |   7   | [restfulStyle.md](restfulStyle.md)               | What is RESTful all about?                          |
 |   8   | [securingMongo.md](securingMongo.md)             | Secure mongo by adding users and require passwords. |
-
+|   9   | [mongo_install.md](mongo_install.md)             | Getting mongo so you can apt install                |
+|  10   | [service_in_class.md](service_in_class.md)       | Registering with system to auto start               |
