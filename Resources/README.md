@@ -7,6 +7,6 @@
 | ***<a href="https://github.com/rugbyprof/4443-5373-Mobile-Apps/tree/master/Resources/03-Python_Intro">03-Python_Intro</a>*** | ***<a href="https://github.com/rugbyprof/4443-5373-Mobile-Apps/tree/master/Resources/03-Python_Intro">None</a>*** | ***<a href="https://github.com/rugbyprof/4443-5373-Mobile-Apps/tree/master/Resources/03-Python_Intro">None</a>*** | ***<a href="https://github.com/rugbyprof/4443-5373-Mobile-Apps/tree/master/Resources/03-Python_Intro">None</a>*** | ***<a href="https://github.com/rugbyprof/4443-5373-Mobile-Apps/tree/master/Resources/03-Python_Intro">| #   | File                                                 | Description |</a>*** |  |
 | ***<a href="https://github.com/rugbyprof/4443-5373-Mobile-Apps/tree/master/Resources/04-Presentations">04-Presentations</a>*** | ***<a href="https://github.com/rugbyprof/4443-5373-Mobile-Apps/tree/master/Resources/04-Presentations">None</a>*** | ***<a href="https://github.com/rugbyprof/4443-5373-Mobile-Apps/tree/master/Resources/04-Presentations">None</a>*** | ***<a href="https://github.com/rugbyprof/4443-5373-Mobile-Apps/tree/master/Resources/04-Presentations">None</a>*** | ***<a href="https://github.com/rugbyprof/4443-5373-Mobile-Apps/tree/master/Resources/04-Presentations">N/A</a>*** |  |
 
-<sup>Last Updated: 2024-02-24 (Sat @ 18:00)</sup> 
+<sup>Last Updated: 2024-02-24 (Sat @ 19:02)</sup> 
 
 <sup>***Days Left is only accurate if the `Last Updated` date is the same as todays date. Otherwise, use the due date!***</sup> 
