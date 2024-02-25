@@ -1,0 +1,1 @@
+I want to create a react app that has a registration, login, and multiple views depending on what a user wants to do. I have an api written in FastApi with candy data (prices descriptions etc.). I want to initially create a react native app that lets a user register, then login. 
