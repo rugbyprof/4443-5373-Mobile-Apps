@@ -7,6 +7,17 @@ import re
 import sys
 from bson.objectid import ObjectId
 from bson.errors import InvalidId
+import base64
+from PIL import Image
+import io
+
+def convert_jpg_to_png(jpg_path, png_path):
+    # Open the JPG image
+    with Image.open(jpg_path) as img:
+        # Convert and save as PNG
+        img.save(png_path, 'PNG')
+
+
 
 
 def is_valid_object_id(id_str):
@@ -117,27 +128,22 @@ class MongoManager:
         :return: List of documents matching the criteria.
         """
 
-        self.query = kwargs.get("query", {})
-        self.filter = kwargs.get("filter", {})
-        self.skip = kwargs.get("skip", 0)
-        self.limit = kwargs.get("limit", 0)
-        self.sort_criteria = kwargs.get("sort_criteria", [("_id,1")])
+        query = kwargs.get("query", {})
+        filter = kwargs.get("filter", {})
+        skip = kwargs.get("skip", 0)
+        limit = kwargs.get("limit", 0)
+        sort_criteria = kwargs.get("sort_criteria", [("_id,1")])
 
         result_data = {}
 
         try:
-            results = (
-                self.collection.find(self.query, self.filter)
-                .sort(self.sort_criteria)
-                .skip(self.skip)
-                .limit(self.limit)
-            )
-            resultList = list(results)
-            if len(resultList) >= 0:
-
+            #results = self.collection.find(query).sort(sort_criteria).skip(skip).limit(limit)
+            results = self.collection.find_one(query)
+            print(results)
+            if len(list(results)) >= 0:
                 kwargs["success"] = True
-                kwargs["result_size"] = len(resultList)
-                kwargs["data"] = resultList
+                kwargs["result_size"] = 0
+                kwargs["data"] = results
 
                 return kwargs
         except PyMongoError as e:
@@ -160,31 +166,30 @@ class MongoManager:
         query = kwargs.get("query", {})
         skip = kwargs.get("skip", 0)
         limit = kwargs.get("limit", 10)  # Assuming a default limit might be helpful
-        sort_criteria = kwargs.get(
-            "sort_criteria", [("_id", 1)]
-        )  # Fixed the sort criteria syntax
+        sort_criteria = kwargs.get("sort_criteria", [("_id", 1)])  # Fixed the sort criteria syntax
 
         try:
-            results = (
-                self.collection.find(query).sort(sort_criteria).skip(skip).limit(limit)
-            )
+            results = self.collection.find(query).sort(sort_criteria).skip(skip).limit(limit)
+            
             resultList = list(results)
-            return {"success": True, "result_size": len(resultList), "data": resultList}
+            return {
+                "success": True,
+                "result_size": len(resultList),
+                "data": resultList
+            }
         except PyMongoError as e:
             return {
                 "success": False,
-                "error": str(
-                    e
-                ),  # It's often a good idea to convert exceptions to strings for readability
+                "error": str(e)  # It's often a good idea to convert exceptions to strings for readability
             }
 
     def post(self, document):
-        print(type(document))
         # Implement the logic to insert data
         if isinstance(document, dict):
             self.collection.insert_one(document)
         elif isinstance(document, list):
             self.collection.insert_many(document)
+
 
     def put(self, filter_query, update_data, upsert=False):
         """
@@ -214,14 +219,14 @@ class MongoManager:
         :param new_price: The new price to set.
         :return: Result of the update operation.
         """
-        if id_key == "_id" and is_valid_object_id(id_val):
+        if id_key == '_id' and is_valid_object_id(id_val):
             # Convert string ID to ObjectId
             id_val = ObjectId(id_val)
 
         # Perform the update
         result = self.collection.update_one(
             {id_key: id_val},  # Query to match the document
-            {"$set": {update_key: update_value}},  # Update operation
+            {"$set": {update_key: update_value}}  # Update operation
         )
 
         # Check if the update was successful
@@ -233,6 +238,20 @@ class MongoManager:
     def delete(self, query):
         # Implement the logic to delete data based on the query
         pass
+
+    def store_image_in_mongodb(self,product_id,png_data):
+
+        self.collection.insert_one({"_id":product_id,"image_data": png_data})
+
+    def get_image_from_mongodb(self,image_id):
+        print({"_id": int(image_id)})
+
+        image_document = self.collection.find_one({"_id": int(image_id)})
+
+        if image_document:
+            return image_document['image_data']  # Assuming the Base64 data is stored under 'image_data'
+        return None
+
 
 
 if __name__ == "__main__":
@@ -252,66 +271,60 @@ if __name__ == "__main__":
 
     mm.setDb("candy_store")
 
-    if query == "1":
+
+    if query == '1':
         # Get all categories sorted ascending by name
         mm.setCollection("categories")
 
-        categories = mm.get(sort_criteria=[("name", -1)], filter={"_id": 0, "count": 1})
+        categories = mm.get(sort_criteria=[('name',-1)],filter={"_id":0,"count":1})
 
         print(categories)
-    elif query == "2":
+    elif query == '2':
         # Get candies sorted ascending by category and desc by price and filter to only see price, category, and name
         mm.setCollection("candies")
 
-        candies = mm.get(
-            sort_criteria=[("category", 1), ("price", -1)],
-            filter={"_id": 0, "price": 1, "category": 1},
-        )
+        candies = mm.get(sort_criteria=[('category',1),('price',-1)],filter={'_id':0,'price':1,'category':1})
 
         print(candies)
-    elif query == "3":
+    elif query == '3':
         mm.setCollection("candies")
-        regex_query = {
-            "name": {"$regex": "crows", "$options": "i"}
-        }  # '$options': 'i' makes it case-insensitive
+        regex_query = {"name": {"$regex": "crows", "$options": "i"}}  # '$options': 'i' makes it case-insensitive
 
         sourCandies = mm.get(
-            query=regex_query,
+            query = regex_query,
             # filter={"_id":0,"name":1},
-            sort_criteria=[("name", 1)],
-        )
+            sort_criteria=[("name",1)])
         print(sourCandies)
-        print(len(sourCandies["data"]))
-
-    elif query == "4":
+        print(len(sourCandies['data']))
+        
+    elif query == '4':
         mm.setCollection("candies")
-        sourCandies = mm.get(
-            query={"category_id": 12},
-            filter={"_id": 0, "price": 1, "category_id": 1, "name": 1},
-        )
+        sourCandies = mm.get(query = {"category_id": 12},filter={'_id':0,'price':1,'category_id':1,'name':1})
         print(sourCandies)
-        print(len(sourCandies["data"]))
+        print(len(sourCandies['data']))
 
-    elif query == "5":
-        price_range_query = {"price": {"$gte": 100.00, "$lte": 150.00}}
+    elif query == '5':
+        price_range_query = {
+            "price": {"$gte": 100.00, "$lte": 150.00}
+        }
         mm.setCollection("candies")
         rangeQuery = mm.get(
-            query=price_range_query,
-            filter={"_id": 0, "price": 1, "category_id": 1, "name": 1},
-            sort_criteria={"price": -1},
-        )
+            query = price_range_query,
+            filter={'_id':0,'price':1,'category_id':1,'name':1},
+            sort_criteria={'price':-1}
+            )
         print(rangeQuery)
-        print(len(rangeQuery["data"]))
-    elif query == "6":
+        print(len(rangeQuery['data']))
+    elif query == '6':
         # original 49.99
         mm.setCollection("candies")
-        print(mm.get(query={"id": "42688432308411"}))
-    elif query == "7":
+        print(mm.get(query={'id':'42688432308411'}))
+    elif query == '7':
         # original 49.99
         mm.setCollection("candies")
-        print(mm.put2("id", "42688432308411", "price", 9.99))
+        print(mm.put2('id', '42688432308411', 'price', 9.99))
 
-    elif query == "8":
+    elif query == '8':
         # client = MongoClient()
         # db = client['candy_store']
         # collection = db['candies']
@@ -322,24 +335,20 @@ if __name__ == "__main__":
         mm.setCollection("candies")
         for i in range(10):
             result = mm.get(
-                sort_criteria=[("name", 1)],
-                skip=(i * 3),
+                sort_criteria=[('name',1)],
+                skip=(i * 3), 
                 limit=3,
-                filter={"_id": 0, "name": 1},
-            )
+                filter={"_id":0,"name":1})
             print(result)
             print("=" * 30)
-    elif query == "9":
+    elif query == '9':
         mm.setCollection("candies")
-        result = mm.get(sort_criteria=[("name", 1)], filter={"_id": 0, "name": 1})
+        result = mm.get(
+            sort_criteria=[("name",1)],
+            filter = {"_id":0,"name":1}
+            )
         print(result)
-    elif query == "10":
-        mm.setCollection("categories")
-        doc = {
-            "count": 23,
-            "name": "Dirt Candy",
-            "tast": "awesome",
-            "color": "pink",
-            "price": 99999.99,
-        }
+    elif query == '10':
+        mm.setCollection('categories')
+        doc = { 'count': 23, 'name': 'Dirt Candy' ,'tast':'awesome','color':'pink','price':99999.99}
         mm.post(doc)

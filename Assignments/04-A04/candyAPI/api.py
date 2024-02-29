@@ -1,18 +1,30 @@
 # Libraries for FastAPI
-from fastapi import FastAPI, Query, Path
-from fastapi.responses import RedirectResponse
+from fastapi import FastAPI, Query, Path, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
-import uvicorn
-import json
+from fastapi.responses import RedirectResponse, Response,  FileResponse
+from mongoManager import MongoManager
+from pydantic import BaseModel
 from pymongo import MongoClient
 from typing import List
-from pydantic import BaseModel
-from mongoManager import MongoManager
-
-# Builtin libraries
+import base64
+import json
+import uvicorn
 import os
-
 from random import shuffle
+from passlib.context import CryptContext
+
+
+pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
+
+def hash_password(password: str):
+    return pwd_context.hash(password)
+
+
+class Person(BaseModel):
+    first: str
+    last: str 
+    email: str
+    password: str 
 
 """
            _____ _____   _____ _   _ ______ ____
@@ -96,7 +108,8 @@ maybe you create your own country file, which would be great. But try to impleme
 organizes your ability to access a countries polygon data.
 """
 
-mm = MongoManager(db="candy_store")
+mm = MongoManager(db='candy_store_2')
+mm.setDb('candy_store_2')
 
 """
   _      ____   _____          _        __  __ ______ _______ _    _  ____  _____   _____
@@ -109,6 +122,7 @@ mm = MongoManager(db="candy_store")
 This is where methods you write to help with any routes written below should go. Unless you have 
 a module written that you include with statements above.  
 """
+
 
 
 """
@@ -130,13 +144,14 @@ async def docs_redirect():
     return RedirectResponse(url="/docs")
 
 
+
 @app.get("/candies")
 def list_all_candies():
     """
     Retrieve a list of all candies available in the store.
     """
-    mm.setCollection("candies")
-    result = mm.get(filter={"_id": 0})
+    mm.setCollection('candies')
+    result = mm.get()
     return result
 
 
@@ -145,25 +160,55 @@ def candies_by_category(category: str):
     """
     Search for candies based on a query string (e.g., name, category, flavor).
     """
-    mm.setCollection("candies")
+    mm.setCollection('candies')
     result = mm.get(
-        query={"category": category},
-        filter={"_id": 0, "name": 1, "price": 1, "category": 1},
-    )
+        query = {'category':category},
+        filter = {"_id":0,"name":1,"price":1,"category":1})
     return result
 
 
 @app.get("/candies/id/{id}")
-def get_candy_by_id(id: str):
+def get_candy_by_id(
+    id: str
+):
     """
     Get detailed information about a specific candy.
     """
-    mm.setCollection("candies")
+    mm.setCollection('candies')
     result = mm.get(
-        query={"id": id}, filter={"_id": 0, "name": 1, "price": 1, "category": 1}
-    )
+        query = {'_id':int(id)})
     return result
 
+@app.get("/image/base64/{image_id}")
+def get_image(image_id: str):
+    mm.setCollection('images')
+    base64_image = mm.get_image_from_mongodb(image_id)
+    if not base64_image:
+        raise HTTPException(status_code=404, detail="Image not found")
+
+    # Decode the Base64 string
+    image_bytes = base64.b64decode(base64_image)
+
+    # Return the raw image bytes with the appropriate content type
+    return Response(content=image_bytes, media_type="image/png")
+
+@app.get("/image/")
+def get_image(img_id:str):
+    mm.setCollection('candies')
+    result = mm.get(query = {'_id':int(img_id)})
+
+    return FileResponse(result['data']['img_path'])
+
+@app.post("/register")
+def register(person: Person):
+    """
+    Add a new candy to the store's inventory.
+    """
+    mm.setCollection("users")
+    person.password = hash_password(person.password)
+    print(hash_password(person.password))
+    mm.post(person.dict())
+    
 
 @app.post("/candies")
 def add_new_candy():
@@ -197,22 +242,6 @@ def list_categories():
     pass
 
 
-@app.get("/promotions")
-def promotions_and_deals():
-    """
-    Information about current promotions, deals, or discounts.
-    """
-    pass
-
-
-@app.get("/store-info")
-def store_information():
-    """
-    Basic information about the candy store, including contact details.
-    """
-    pass
-
-
 """
 This main block gets run when you invoke this file. How do you invoke this file?
 
@@ -228,8 +257,19 @@ Note:
     The right side (app) is the bearingiable name of the FastApi instance declared at the top of the file.
 """
 if __name__ == "__main__":
+    #gunicorn -w 4 -k uvicorn.workers.UvicornWorker app:main --bind 0.0.0.0:8000 --keyfile=./key.pem --certfile=./cert.pem
+
+    # uvicorn.run("api:app", host="kidsinvans.fun", port=8080, log_level="debug", reload=True)
+
     uvicorn.run(
-        "api:app", host="kidsinvans.fun", port=8080, log_level="debug", reload=True
+        "api:app",
+        host="0.0.0.0",  # Use 0.0.0.0 to bind to all network interfaces
+        #port=443,  # Standard HTTPS port
+        port=8080,  # Standard HTTPS port
+        log_level="debug",
+        ssl_keyfile="/etc/letsencrypt/archive/kidsinvans.fun/privkey1.pem",
+        ssl_certfile="/etc/letsencrypt/archive/kidsinvans.fun/fullchain1.pem",
+        reload=True
     )
 """                                   ^
                                       |

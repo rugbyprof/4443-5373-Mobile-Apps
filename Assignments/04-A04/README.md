@@ -1,5 +1,5 @@
 ## Assignment 4 - Mongo DB
-#### Due: 02-20-2024 (Tue @ 11 or 4)
+#### Due: 03-05-2024 (Tue @ 11 or 4)
 
 ## Files
 
@@ -7,7 +7,6 @@
 | :---: | :--------------------- | :--------------------------------------------- |
 |   1   | [candyAPI](candyAPI)   | Necessary code to load and run your api.       |
 |   2   | [topicHelp](topicHelp) | Different files to help with different topics. |
-
 
 
 ## Basic Overview
@@ -91,16 +90,86 @@ We need routes that will do basic querying of our mongo `candy store`. Below is 
 10. Update a candies { ....... }
 11. Delete a candy.
 
-### Register Api
+### Testing API
 
-Use the help [HERE](./topicHelp/registerApi.md) to get your api registered with your server to keep it alive.
+- You should write a file called `apiTests.py` that would invoke each route necessary to show that they all work successfully. 
+- I have a nice example of code and test calls [HERE](./topicHelp/apiTests.md) to help you automate some tests for all your routes.
+
+## Registering Api
+
+#### Step 1
+- Create a virtual environment and install requirements.
+- This will create a folder called `myvenv` in your project folder.
+- Project folder for this example is: `/root/A03`
+
+requirements.txt 
+```txt
+fastapi
+uvicorn
+rich
+```
+
+```bash
+cd /root/A03
+python3 -m venv myvenv
+source myvenv/bin/activate #prompt will change with name of venv in front of it
+pip install -r requirements.txt
+```
+
+#### Step 2
+
+- Create a service file:
+```bash
+cd /etc/systemd/system   # change into system folder
+nano A03.service    # create a service file
+```
+
+Add this code changing appropriate parts for your own script
+```bash
+ [Unit]
+    Description=FastAPI app
+    After=network.target
+
+    [Service]
+    User=root
+    WorkingDirectory=/root/A03
+    ExecStart=/root/A03/myvenv/bin/python /root/A03/api.py
+
+    Restart=always
+
+    [Install]
+    WantedBy=multi-user.target
+```
+#### Step 3
 
 
-### Requirements
+Test the command from your service file, that starts your `api.py` to make sure it works:
+```bash
+$/root/A03/myvenv/bin/python /root/A03/api.py
+```
+
+#### Step 4
+
+```bash
+sudo systemctl daemon-reload  # register your changes
+sudo systemctl enable A03     # register with system to start on reboot
+sudo systemctl start A03      # use systemctl to start your app
+sudo systemctl status A03     # check if it is really running
+
+sudo systemctl stop A03       # this will stop it
+sudo systemctl restart A03    # this will restart it
+sudo systemctl disable A03    # this will stop it from restarting at boot
+```
+
+There are some other ways of registering your api [HERE](./topicHelp/registerApi.md).
+
+
+## Requirements
 
 - Create a folder called `A04` in your Assignments folder AND on your server under the root folder.
 - Place your mongo classes and api code in that folder. 
-- This instance of the API should be up and running if I goto http://your.ip.address:8080
+- This instance of the API should be up and running if I goto http://your.ip.address:8084
 - I should be able to run all of the specified routes from above.
+- You should also provide python `test.py` file, that runs tests on all the routes within your project folder.
 
 
