@@ -100,7 +100,7 @@ We need routes that will do basic querying of our mongo `candy store`. Below is 
 #### Step 1
 - Create a virtual environment and install requirements.
 - This will create a folder called `myvenv` in your project folder.
-- Project folder for this example is: `/root/A03`
+- Project folder for this example is: `/root/A04`
 
 requirements.txt 
 ```txt
@@ -110,7 +110,7 @@ rich
 ```
 
 ```bash
-cd /root/A03
+cd /root/A04
 python3 -m venv myvenv
 source myvenv/bin/activate #prompt will change with name of venv in front of it
 pip install -r requirements.txt
@@ -121,7 +121,7 @@ pip install -r requirements.txt
 - Create a service file:
 ```bash
 cd /etc/systemd/system   # change into system folder
-nano A03.service    # create a service file
+nano A04.service    # create a service file
 ```
 
 Add this code changing appropriate parts for your own script
@@ -132,8 +132,8 @@ Add this code changing appropriate parts for your own script
 
     [Service]
     User=root
-    WorkingDirectory=/root/A03
-    ExecStart=/root/A03/myvenv/bin/python /root/A03/api.py
+    WorkingDirectory=/root/A04
+    ExecStart=/root/A04/myvenv/bin/python /root/A04/api.py
 
     Restart=always
 
@@ -145,20 +145,20 @@ Add this code changing appropriate parts for your own script
 
 Test the command from your service file, that starts your `api.py` to make sure it works:
 ```bash
-$/root/A03/myvenv/bin/python /root/A03/api.py
+$/root/A04/myvenv/bin/python /root/A04/api.py
 ```
 
 #### Step 4
 
 ```bash
 sudo systemctl daemon-reload  # register your changes
-sudo systemctl enable A03     # register with system to start on reboot
-sudo systemctl start A03      # use systemctl to start your app
-sudo systemctl status A03     # check if it is really running
+sudo systemctl enable A04     # register with system to start on reboot
+sudo systemctl start A04      # use systemctl to start your app
+sudo systemctl status A04     # check if it is really running
 
-sudo systemctl stop A03       # this will stop it
-sudo systemctl restart A03    # this will restart it
-sudo systemctl disable A03    # this will stop it from restarting at boot
+sudo systemctl stop A04       # this will stop it
+sudo systemctl restart A04    # this will restart it
+sudo systemctl disable A04    # this will stop it from restarting at boot
 ```
 
 There are some other ways of registering your api [HERE](./topicHelp/registerApi.md).
@@ -170,6 +170,6 @@ There are some other ways of registering your api [HERE](./topicHelp/registerApi
 - Place your mongo classes and api code in that folder. 
 - This instance of the API should be up and running if I goto http://your.ip.address:8084
 - I should be able to run all of the specified routes from above.
-- You should also provide python `test.py` file, that runs tests on all the routes within your project folder.
+- You should also provide python `test.py` file, that runs tests on all the routes within your project folder. Remember the helper file [HERE](./topicHelp/apiTests.md)
 
 
