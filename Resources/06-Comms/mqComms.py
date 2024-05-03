@@ -1,4 +1,23 @@
 """
+Basically queues can be binded to an exchange based on routingKeys.
+
+Assume that you have 3 different publishers.
+Publisher1 sending message to exchange with routingKey "events"
+Publisher2 sending message to exchange with routingKey "tasks"
+Publisher3 sending message to exchange with routingKey "jobs"
+
+You can have a consumer that consumes only messages with specific routhingKey.
+For example in order to have a consumer for "events" messages you declare like this
+
+ channel.queueBind(queueName, exchangeName, "events");
+If you want to consume all the messages coming to the exchange you give the routing as '#'
+
+So in short what i can say is,
+1. Messages will be published to an exchange.
+2. Queues will be bound to exchange based on routingKeys.
+3. RabbitMQ will forward messages with matching routing keys to the corresponding queues.
+
+Please
 """
 
 import json
@@ -10,7 +29,6 @@ import random
 from threading import Thread
 from rich import print
 import requests
-
 import subprocess
 
 
@@ -31,7 +49,78 @@ def isJson(myjson):
     return True
 
 
-class Comms(object):
+# Usage example:
+# amqp_url = 'amqp://user:password@localhost'
+# sender = DirectMessageSender(amqp_url)
+# sender.send('routing_key', 'Hello RabbitMQ!')
+# sender.close()
+
+
+class DirectMessageSender:
+    def __init__(self, user, password, url="chat.sendmessage.live", exchange="chat"):
+        amqp_url = f"amqp://{user}:{password}@{url}"
+        self.connection = pika.BlockingConnection(pika.URLParameters(amqp_url))
+        self.channel = self.connection.channel()
+        self.exchange = exchange
+
+        # Ensure the exchange exists. For direct messaging, you might use the default ('') exchange.
+        self.channel.exchange_declare(
+            exchange=self.exchange, exchange_type="direct", durable=True
+        )
+
+    def send(self, routing_key, message):
+        self.channel.basic_publish(
+            exchange=self.exchange,
+            routing_key=routing_key,
+            body=message,
+            properties=pika.BasicProperties(
+                delivery_mode=2,  # make message persistent
+            ),
+        )
+
+    def close(self):
+        self.connection.close()
+
+
+# Usage example:
+# amqp_url = 'amqp://user:password@localhost'
+# receiver = DirectMessageReceiver(amqp_url, 'user_queue')
+# receiver.start()
+# Do something else here or just wait; the receiver runs on its own thread.
+# receiver.close()  # When you're ready to stop.
+
+
+class DirectMessageReceiver:
+    def __init__(self, user, password, queue_name, url="chat.sendmessage.live"):
+        amqp_url = f"amqp://{user}:{password}@{url}"
+        self.connection = pika.BlockingConnection(pika.URLParameters(amqp_url))
+        self.channel = self.connection.channel()
+
+        # Ensure the queue exists. This is idempotent.
+        self.channel.queue_declare(queue=queue_name, durable=True)
+
+        self.queue_name = queue_name
+
+    def on_message(self, ch, method, properties, body):
+        print(f"Received message: {body.decode()}")
+        # Here, implement what you want to do with the message
+
+    def start_consuming(self):
+        self.channel.basic_consume(
+            queue=self.queue_name, on_message_callback=self.on_message, auto_ack=True
+        )
+        print(f"[*] Waiting for messages in {self.queue_name}. To exit press CTRL+C")
+        self.channel.start_consuming()
+
+    def start(self):
+        thread = Thread(target=self.start_consuming)
+        thread.start()
+
+    def close(self):
+        self.connection.close()
+
+
+class MQConnect(object):
     """This base class simply connects to the rabbitmq server and is used by both the sender
     and listener classes.
     """
@@ -47,7 +136,6 @@ class Comms(object):
             user="yourteamname",
             password= "yourpassword"
         )
-
         """
         self.exchange = kwargs.get("exchange", None)
         self.port = kwargs.get("port", 5432)
@@ -56,9 +144,6 @@ class Comms(object):
         self.password = kwargs.get("password", None)
         self.binding_keys = kwargs.get("binding_keys", [])
         self.messageQueue = {}
-
-        # if not self.user in self._messageQueue:
-        #     self._messageQueue[self.user] = []
 
         self.setupConnection()
 
@@ -113,9 +198,9 @@ class Comms(object):
             self.connect()
 
 
-class CommsListener(Comms):
+class MQListener(MQConnect):
     def __init__(self, **kwargs):
-        """Extends base class Comms."""
+        """Extends base class MQConnect."""
         self.binding_keys = kwargs.get("binding_keys", [])
 
         super().__init__(**kwargs)
@@ -171,8 +256,10 @@ class CommsListener(Comms):
         self.channel.start_consuming()
 
     def callback(self, ch, method, properties, body):
-        """This method gets run when a message is received. You can alter it to
-        do whatever is necessary.
+        """
+        Description:
+            - This method gets run when a message is received. You can alter it to do whatever is necessary.
+
         """
 
         if isJson(body):
@@ -193,7 +280,7 @@ class CommsListener(Comms):
         ).start()
 
 
-class CommsSender(Comms):
+class MQSender(MQConnect):
     def __init__(self, **kwargs):
         """Extends Comms and adds a "send" method which sends data to a
         specified channel (exchange).
@@ -336,7 +423,7 @@ if __name__ == "__main__":
 
             creds["exchange"] = f"game{id}"
             print(creds)
-            senders.append(CommsSender(**creds))
+            senders.append(MQSender(**creds))
 
             # cmd = random.choice(body[cmd])
             # data = random.choice(body[cmd])
@@ -350,7 +437,7 @@ if __name__ == "__main__":
     else:
         print("Comms Listener starting. To exit press CTRL+C ...")
 
-        commsListener = CommsListener(**creds)
+        commsListener = MQListener(**creds)
         # m = MultiComms('player-4','game1')
         commsListener.bindKeysToQueue([f"#.{user}.#", "#.broadcast.#"])
         commsListener.startConsuming()
