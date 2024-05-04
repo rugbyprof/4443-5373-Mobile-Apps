@@ -99,8 +99,40 @@
 
 ### Search
 
+- Page should look like a search page with an intuitive interface utilizing icons or instructions 
+- Navigation bar or similar
+
+- Multiple levels of search in a variety of implementations
+  - Category + item search
+  - Keyword + keyword (e.g. chocolate & orange)
+  - Price range + keyword (e.g. < 50 & movie theater)
+
 ### Location
+
+- Page should have a map view and possibly some map tools provided by the map library.
+- Any additional search capabilities or fake store locations or color adaptations / icon adaptations are a welcome addition
+- At minimum show user location + additional users who have "given access" to their location. 
+- A location table or collection determines who shows up
+- Info in location collection should only contain:
+  - user_id
+  - lon
+  - lat
+  - timestamp
+- Where timestamp is used to timeout current individuals who gave access to their location. This is not required to be implemented but is the kind of functionality that boosts your grade.
+
 
 ### Fake Chat
 
+- A chat page that allows authenticated users ability to chat
+- It should have the design and layout of a chat page + the theme of the app.
+- It should have a list of "groups" or "users" as well to choose to have a chat with.
+
 ### Image Upload
+
+- This page can be accessed from many locations not on the main menu (navigation) but through an image upload button. 
+  - For example:
+    - chat page to send an image to chat client
+    - search page (fake admin page) to replace candy (or similar) image
+    - location page to add image of another user
+  - This functionality should be accompanied by a post route that saves an image on your server disk.
+  - Part of the image page allows uploaded images to be browsed. 
